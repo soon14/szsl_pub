@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+
+        <LinearLayout
+            android:id="@+id/mainView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:background="@color/divider2bg" />
+
+                <RelativeLayout
+                    android:id="@+id/dateLayout"
+                    style="@style/settingLayout" >
+
+                    <TextView
+                        android:id="@+id/datetext"
+                        android:layout_width="90dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dip"
+                        android:text="日期"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/datetext"
+                        android:text="请选择"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dip"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:layout_marginLeft="16dip"
+                    android:background="@color/divider2white" />
+
+                <RelativeLayout
+                    android:id="@+id/timeLayout"
+                    style="@style/settingLayout" >
+
+                    <TextView
+                        android:id="@+id/timetext"
+                        android:layout_width="90dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dip"
+                        android:text="时间"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/timetext"
+                        android:text="请选择"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dip"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:background="@color/divider2bg" />
+
+                <LinearLayout android:id="@+id/xyLay"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" 
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        style="@style/settingLayout"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="19dip"
+                            android:text="收缩压"
+                            android:textColor="@color/actionbar_bg"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/sbp"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:hint="输入收缩压"
+                            android:inputType="number"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="#d3d3d3"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.6dip"
+                        android:layout_marginLeft="16dip"
+                        android:background="@color/divider2white" />
+
+                    <LinearLayout
+                        style="@style/settingLayout"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="19dip"
+                            android:text="舒张压"
+                            android:textColor="@color/actionbar_bg"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/dbp"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@null"
+                            android:hint="输入舒张压"
+                            android:inputType="number"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="#d3d3d3"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.6dip"
+                        android:layout_marginLeft="16dip"
+                        android:background="@color/divider2white" />
+                </LinearLayout>
+                
+                <LinearLayout android:id="@+id/ll_value"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" 
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        style="@style/settingLayout"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="19dip"
+                            android:text="身高"
+                            android:textColor="@color/actionbar_bg"
+                            android:textSize="16sp" 
+                            android:id="@+id/tv_value"
+                            />
+
+                        <EditText
+                            android:id="@+id/et_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:hint="输入身高"
+                            android:inputType="number"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="#d3d3d3"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.6dip"
+                        android:layout_marginLeft="16dip"
+                        android:background="@color/divider2white" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+</LinearLayout>

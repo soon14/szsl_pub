@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:orientation="horizontal"
+                android:layout_height="100dp">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_home_1"
+                    style="@style/home_layout_horizontal_style">
+
+                    <LinearLayout
+                        style="@style/home_layout_child_style"
+                        android:background="@drawable/bg_home_6"></LinearLayout>
+
+                    <TextView
+                        style="@style/home_text_style"
+                        android:text="住院预缴金" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_home_2"
+                    style="@style/home_layout_horizontal_style">
+
+                    <LinearLayout
+                        style="@style/home_layout_child_style"
+                        android:background="@drawable/bg_home_7"></LinearLayout>
+
+                    <TextView
+                        style="@style/home_text_style"
+                        android:text="出院结算" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_home_3"
+                    android:visibility="gone"
+                    style="@style/home_layout_horizontal_style">
+
+                    <LinearLayout
+                        style="@style/home_layout_child_style"
+                        android:background="@drawable/bg_home_yrqd"></LinearLayout>
+
+                    <TextView
+                        style="@style/home_text_style"
+                        android:text="每日清单" />
+                </LinearLayout>
+            </LinearLayout>
+
+            </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

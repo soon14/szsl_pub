@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <ScrollView
+        android:id="@+id/mainView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="19dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19dip"
+                    android:text="请输入"
+                    android:textColor="#757575"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XX"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="的卡信息进行验证"
+                    android:textColor="#757575"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:background="@color/divider2bg" />
+
+                <RelativeLayout
+                    android:id="@+id/cardLayout"
+                    style="@style/settingLayout" >
+
+                    <TextView
+                        android:id="@+id/cardtext"
+                        android:layout_width="90dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dip"
+                        android:text="卡类型"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/cardtext"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dip"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:layout_marginLeft="16dip"
+                    android:background="@color/divider2white" />
+
+                <LinearLayout
+                    style="@style/settingLayout"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="90dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19dip"
+                        android:text="卡号"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/cardnum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="输入卡号"
+                        android:maxLength="20"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="#d3d3d3"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:layout_marginLeft="16dip"
+                    android:background="@color/divider2white" />
+
+                <RelativeLayout
+                    android:id="@+id/addressLayout"
+                    style="@style/settingLayout" >
+
+                    <TextView
+                        android:id="@+id/addresstext"
+                        android:layout_width="90dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dip"
+                        android:text="归属地"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/addresstext"
+                        android:text="请选择"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dip"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:background="@color/divider2bg" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="48dip"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+               android:layout_marginTop="37dip"
+                android:background="@drawable/bigbut_green"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

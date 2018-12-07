@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/history"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="#FFD484"
+        android:gravity="center"
+        android:text="调入历史记录，快捷预约 >>"
+        android:textColor="@color/red"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/familyLay"
+        android:layout_width="match_parent"
+        android:layout_height="70dip"
+        android:background="@color/white" >
+
+        <com.app.tanklib.bitmap.view.RoundImageView
+            android:id="@+id/header"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@id/header"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/family"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dip"
+            android:layout_toLeftOf="@+id/arrow_right"
+            android:textColor="@color/gray_text"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dip"
+        android:layout_marginBottom="12dip"
+        android:background="@color/divider2bg" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dip"
+        android:background="@color/divider2bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/orgLay"
+            android:layout_width="wrap_content"
+            android:layout_height="45dip"
+            android:layout_weight="2"
+            android:background="@drawable/dialog_select" >
+
+            <TextView
+                android:id="@+id/org"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dip"
+                android:layout_toLeftOf="@+id/org_arrow_right"
+                android:gravity="center"
+                android:text="请选择医院"
+                android:textColor="@color/gray_text"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/org_arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dip"
+                android:src="@drawable/arrow_right" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.6dip"
+            android:layout_height="32dip"
+            android:layout_gravity="center_vertical"
+            android:background="@color/divider2white" />
+
+        <RelativeLayout
+            android:id="@+id/deptLay"
+            android:layout_width="wrap_content"
+            android:layout_height="45dip"
+            android:layout_weight="3"
+            android:background="@drawable/dialog_select" >
+
+            <TextView
+                android:id="@+id/dept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dip"
+                android:layout_toLeftOf="@+id/dept_arrow_right"
+                android:gravity="center"
+                android:text="全部科室"
+                android:textColor="@color/gray_text"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/dept_arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dip"
+                android:src="@drawable/arrow_right" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dip"
+        android:layout_marginBottom="12dip"
+        android:background="@color/divider2bg" />
+
+</LinearLayout>

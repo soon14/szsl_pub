@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <ScrollView
+        android:id="@+id/mainView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dip"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25dip"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/p1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/pwd_q1" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="3dip"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/p1"
+                            android:background="#bdbdbd" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="25dip"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/p2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/pwd_q1" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="3dip"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/p2"
+                            android:background="#bdbdbd" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/pp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/pwd_q3"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip" >
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="安全验证"
+                    android:textColor="@color/pwdtest2"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="修改绑定"
+                    android:textColor="@color/pwdtest2"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dip"
+                    android:layout_marginTop="25dip"
+                    android:text="验证原手机号码"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:layout_marginTop="6dip"
+                    android:background="@color/divider2bg" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="49dip"
+                    android:background="@color/white" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/mobileclear"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dip"
+                            android:text="手机号"
+                            android:textColor="#1fac8c"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@null"
+                            android:hint="输入手机号"
+                            android:inputType="phone"
+                            android:maxLength="16"
+                            android:paddingLeft="7dip"
+                            android:paddingRight="7dip"
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:textColorHint="#d3d3d3"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/mobileclear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dip"
+                        android:src="@drawable/btn_editclear"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:background="@color/divider2white" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="49dip"
+                    android:background="@color/white" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/but_checkcard"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dip"
+                            android:text="验证码"
+                            android:textColor="#1fac8c"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/checkcard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@null"
+                            android:hint="输入验证码"
+                            android:inputType="number"
+                            android:maxLength="16"
+                            android:paddingLeft="7dip"
+                            android:paddingRight="7dip"
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:textColorHint="#d3d3d3"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/but_checkcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dip"
+                        android:background="@drawable/btn_checkcard"
+                        android:textColor="#757575" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:background="@color/divider2bg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dip"
+                    android:layout_marginTop="25dip"
+                    android:text="验证新手机号码"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:layout_marginTop="6dip"
+                    android:background="@color/divider2bg" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="49dip"
+                    android:background="@color/white" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/mobileclear1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dip"
+                            android:text="手机号"
+                            android:textColor="#1fac8c"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/mobile1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@null"
+                            android:hint="输入手机号"
+                            android:inputType="phone"
+                            android:maxLength="16"
+                            android:paddingLeft="7dip"
+                            android:paddingRight="7dip"
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:textColorHint="#d3d3d3"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/mobileclear1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dip"
+                        android:src="@drawable/btn_editclear"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:background="@color/divider2white" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="49dip"
+                    android:background="@color/white" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/but_checkcard1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="60dip"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dip"
+                            android:text="验证码"
+                            android:textColor="#1fac8c"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/checkcard1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@null"
+                            android:hint="输入验证码"
+                            android:inputType="number"
+                            android:maxLength="16"
+                            android:paddingLeft="7dip"
+                            android:paddingRight="7dip"
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:textColorHint="#d3d3d3"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/but_checkcard1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dip"
+                        android:background="@drawable/btn_checkcard"
+                        android:textColor="#757575" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:background="@color/divider2bg" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="48dip"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                 android:layout_marginTop="35dip"
+                android:background="@drawable/bigbut_green"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

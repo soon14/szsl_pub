@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <com.app.tanklib.view.LRViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/flay"
+        android:layout_gravity="center"
+        >
+    </com.app.tanklib.view.LRViewPager>
+
+    <FrameLayout
+        android:id="@+id/flay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dip"
+            android:background="@color/divider2bg"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/lay1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/f1_n"
+                    style="@style/tab_image"
+                    android:src="@drawable/foot_b1"/>
+
+                <ImageView
+                    android:id="@+id/f1_p"
+                    style="@style/tab_image"
+                    android:src="@drawable/foot_b1_b"/>
+
+                <TextView
+                    android:id="@+id/tv1_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/f1_n"
+                    android:layout_centerHorizontal="true"
+                    android:text="首页"
+                    android:textColor="#6d6d6d"
+                    />
+
+                <TextView
+                    android:id="@+id/tv1_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/f1_p"
+                    android:layout_centerHorizontal="true"
+                    android:text="首页"
+                    android:textColor="@color/actionbar_bg"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lay2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:id="@+id/f2_n"
+                    style="@style/tab_image"
+                    android:src="@drawable/foot_b2"/>
+
+                <ImageView
+                    android:id="@+id/f2_p"
+                    style="@style/tab_image"
+                    android:src="@drawable/foot_b2_b"/>
+
+                <TextView
+                    android:id="@+id/tv2_n"
+                    style="@style/tab_text"
+                    android:layout_below="@+id/f2_n"
+                    android:text="咨询"
+                    android:textColor="#6d6d6d"
+                    />
+
+                <TextView
+                    android:id="@+id/tv2_p"
+                    style="@style/tab_text"
+                    android:layout_below="@+id/f2_p"
+                    android:text="咨询"
+                    android:textColor="@color/actionbar_bg"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_message_count"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_toRightOf="@+id/f2_n"
+                    android:src="@drawable/count_ic"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lay3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/f3_n"
+                    style="@style/tab_image"
+                    android:src="@drawable/foot_b3"/>
+
+                <ImageView
+                    android:id="@+id/f3_p"
+                    style="@style/tab_image"
+                    android:src="@drawable/foot_b3_b"/>
+
+                <TextView
+                    android:id="@+id/tv3_n"
+                    style="@style/tab_text"
+                    android:layout_below="@+id/f3_n"
+                    android:text="消息"
+                    android:textColor="#6d6d6d"
+                    />
+
+                <TextView
+                    android:id="@+id/tv3_p"
+                    style="@style/tab_text"
+                    android:layout_below="@+id/f3_p"
+                    android:text="消息"
+                    android:textColor="@color/actionbar_bg"
+                    />
+
+                <com.bsoft.hospital.pub.suzhoumh.view.CountView
+                    android:id="@+id/foot_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dip"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lay4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/f4_n"
+                    style="@style/tab_image"
+                    android:src="@drawable/foot_b4"/>
+
+                <ImageView
+                    android:id="@+id/f4_p"
+                    style="@style/tab_image"
+                    android:src="@drawable/foot_b4_b"/>
+
+                <TextView
+                    android:id="@+id/tv4_n"
+                    style="@style/tab_text"
+                    android:layout_below="@+id/f4_n"
+                    android:text="我的"
+                    android:textColor="#6d6d6d"
+                    />
+
+                <TextView
+                    android:id="@+id/tv4_p"
+                    style="@style/tab_text"
+                    android:layout_below="@+id/f4_p"
+                    android:text="我的"
+                    android:textColor="@color/actionbar_bg"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

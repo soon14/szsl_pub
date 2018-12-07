@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+
+        <LinearLayout
+            android:id="@+id/mainView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:background="@color/white" 
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/tv_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dip"
+                    android:text="单位：KG"
+                    android:textColor="@color/gray_text"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/monitorLay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/dialog_select"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dip" 
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="15dip"
+                        android:src="@drawable/icon_collection" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dip"
+                        android:text="设备监测"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="140dip"
+                android:background="@color/white" 
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rl_left"
+                    android:layout_width="80dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/dialog_select" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/arrow_left" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/monitorValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="0"
+                    android:textColor="@color/actionbar_bg"
+                    android:textSize="60sp"
+                    android:textStyle="bold" />
+                <LinearLayout 
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/ll_mmhg"
+                    android:visibility="gone"
+                    >
+               	<TextView 
+               	    android:id="@+id/tv_ss_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/actionbar_bg"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+               	    />
+               	<TextView 
+               	    android:id="@+id/tv_sz_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/actionbar_bg"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+               	    />
+				</LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_right"
+                    android:layout_width="80dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/dialog_select" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:paddingBottom="20dip"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="15sp" 
+                android:visibility="gone"
+                />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:background="@color/divider2white" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="15dip" >
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_marginLeft="12dip"
+                    android:src="@drawable/icon_monitor_xy_big" />
+
+                <TextView android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dip"
+                    android:text="血压"
+                    android:textColor="@color/gray_text"
+                    android:textSize="15sp" />
+                <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:text="单位:"
+                android:textColor="@color/gray_text"
+                android:textSize="15sp" 
+                android:layout_toRightOf="@+id/name"
+                />
+            <TextView
+                android:id="@+id/unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="kg"
+                android:textColor="@color/gray_text"
+                android:textSize="15sp" 
+                android:layout_toRightOf="@+id/tv1"
+                />
+            </LinearLayout>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="240dip"
+                android:background="@color/white"
+                android:paddingBottom="30dip"
+                 />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:background="@color/divider2white" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginTop="20dip"
+                android:background="@color/divider2white" 
+                />
+
+            <RelativeLayout
+                android:id="@+id/rl_history"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:background="@drawable/dialog_select" 
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dip"
+                    android:text="查看历史数据"
+                    android:textColor="@color/gray_text"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow_right" 
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+            <ListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/divider2white"
+            android:dividerHeight="1dp"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent"
+            android:scrollingCache="false" 
+            android:layout_marginBottom="20dp">
+        </ListView>
+        </LinearLayout>
+
+</LinearLayout>

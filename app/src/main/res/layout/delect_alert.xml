@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/corners_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="要删除该信息吗?"
+        android:textColor="#737373"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/delect"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="16dip"
+        android:layout_marginTop="15dip"
+        android:background="@drawable/bigbut_red"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_marginBottom="15dip"
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="16dip"
+        android:layout_marginTop="15dip"
+        android:background="@drawable/bigbut_gray"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+</LinearLayout>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginTop="12dip"
+                android:background="@color/divider2bg" />
+
+            <RelativeLayout
+                android:id="@+id/familyLay"
+                android:layout_width="match_parent"
+                android:layout_height="70dip"
+                android:background="@color/white" >
+
+                <com.app.tanklib.bitmap.view.RoundImageView
+                    android:id="@+id/header"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dip" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_toRightOf="@id/header"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/family"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dip"
+                    android:layout_toLeftOf="@+id/arrow_right"
+                    android:textColor="@color/gray_text"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/arrow_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dip"
+                    android:src="@drawable/arrow_right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dip"
+                android:background="@color/divider2bg" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginTop="12dip"
+                android:background="@color/divider2bg" />
+
+            <RelativeLayout android:id="@+id/planLay"
+                android:layout_width="match_parent"
+                android:layout_height="55dip"
+                android:background="@drawable/dialog_select"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="选择疫苗"
+                    android:textColor="@color/gray_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/planText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dip"
+                    android:text="请选择"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginLeft="15dip"
+                android:background="@color/divider2white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dip"
+                android:background="@drawable/dialog_select"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="预约机构"
+                    android:textColor="@color/gray_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/orgname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dip"
+                    android:text="请选择"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginLeft="15dip"
+                android:background="@color/divider2white" />
+
+            <RelativeLayout android:id="@+id/numberLay"
+                android:layout_width="match_parent"
+                android:layout_height="55dip"
+                android:background="@drawable/dialog_select"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="预约时间"
+                    android:textColor="@color/gray_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/numberText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dip"
+                    android:text="请选择"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginLeft="15dip"
+                android:background="@color/divider2white" />
+
+            <RelativeLayout android:id="@+id/productLay"
+                android:layout_width="match_parent"
+                android:layout_height="55dip"
+                android:background="@drawable/dialog_select"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="疫苗产品"
+                    android:textColor="@color/gray_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/productText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dip"
+                    android:text="请选择"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginLeft="15dip"
+                android:background="@color/divider2white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dip"
+                android:background="@drawable/dialog_select"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="项目费用"
+                    android:textColor="@color/gray_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/payText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dip"
+                    android:text="请选择"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginLeft="15dip"
+                android:background="@color/divider2white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dip"
+                android:background="@color/white" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="支付方式"
+                    android:textColor="@color/gray_text"
+                    android:textSize="16sp" />
+
+                <com.bsoft.hospital.pub.suzhoumh.view.SwitchView
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dip" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginLeft="5dip"
+                android:background="@color/divider2bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="20dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:text="点击提交按钮,即表示同意"
+                    android:textColor="#757575"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/protocol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="《知情同意书》"
+                    android:textColor="#1fac8c"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="48dip"
+                android:layout_marginBottom="30dip"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="30dip"
+                android:background="@drawable/bigbut_green"
+                android:gravity="center"
+                android:text="提交预约"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

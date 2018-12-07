@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_select"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        >
+
+        <com.app.tanklib.bitmap.view.RoundImageView
+            android:id="@+id/iv_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/doc_male"
+            />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_head"
+            android:text="高春正"
+            android:textColor="#333333"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_profession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_name"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_name"
+            android:text=""
+            android:textColor="#4d4d4d"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_zjfy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_head"
+            android:text=""
+            android:textColor="#4d4d4d"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_dept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_head"
+            android:gravity="center"
+            android:text="内科"
+            android:textColor="#4d4d4d"
+            android:textSize="15sp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_dept"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/tv_see_all"
+            android:layout_toRightOf="@+id/iv_head"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text=""
+            android:textSize="14sp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_see_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_intro"
+            android:layout_below="@+id/btn_consult"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/info_down"
+            android:padding="5dp"
+            android:text=""
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btn_consult"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_profession"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bigbut_blue"
+            android:text="咨询"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btn_see_doctinfo"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bigbut_blue"
+            android:text="简介"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+
+        <Button
+            android:id="@+id/btn_appoint"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/btn_see_doctinfo"
+            android:background="@drawable/bigbut_blue"
+            android:text="预约"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <!--actionbar-->
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dip"
+            android:background="@color/divider2bg" />
+
+        <RelativeLayout
+            android:id="@+id/layout1"
+            style="@style/settingLayout" >
+            <TextView
+                android:layout_width="120dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:text="姓名："
+                android:textSize="16sp"
+                android:id="@+id/text1_tip"
+                />
+            <TextView
+                android:id="@+id/tv_brxm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_toRightOf="@+id/text1_tip"
+                />
+            <EditText
+                android:id="@+id/edit1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:hint="请填写"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:background="@null"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                android:layout_toRightOf="@+id/text1_tip"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dip"
+            android:background="@color/divider2white" />
+
+        <RelativeLayout
+            android:id="@+id/layout2"
+            style="@style/settingLayout" >
+            <TextView
+                android:layout_width="120dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:text="个人编号："
+                android:textSize="16sp"
+                android:id="@+id/text2_tip"
+                />
+            <TextView
+                android:id="@+id/tv_grbh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_toRightOf="@+id/text2_tip"
+                />
+            <EditText
+                android:id="@+id/edit2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:hint="请填写"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:background="@null"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                android:layout_toRightOf="@+id/text2_tip"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dip"
+            android:background="@color/divider2white" />
+
+        <RelativeLayout
+            android:id="@+id/layout3"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="@drawable/dialog_select" >
+            <TextView
+                android:layout_width="120dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:text="往年账户余额："
+                android:textSize="16sp"
+                android:id="@+id/text3_tip"
+                />
+
+            <TextView
+                android:id="@+id/tv_wnzh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_toRightOf="@+id/text3_tip"
+                />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:id="@+id/ll_sex"
+            android:visibility="gone"
+            >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:background="@color/divider2bg"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rl_sex_1"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@drawable/dialog_select" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dip"
+                    android:text="男"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/sex1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:src="@drawable/icon_gou"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:background="@color/divider2white" />
+
+            <RelativeLayout
+                android:id="@+id/rl_sex_2"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@drawable/dialog_select" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dip"
+                    android:text="女"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/sex2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:src="@drawable/icon_gou"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dip"
+            android:background="@color/divider2white" />
+        <RelativeLayout
+            android:id="@+id/layout6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_select"
+            android:minHeight="45dip"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip" >
+
+            <TextView
+                android:layout_width="120dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:text="当年账户余额："
+                android:textSize="16sp"
+                android:id="@+id/text6_tip"
+                />
+
+            <TextView
+                android:id="@+id/tv_dnzh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_toRightOf="@+id/text6_tip"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.6dip"
+            android:background="@color/divider2bg" />
+    </LinearLayout>
+
+</LinearLayout>

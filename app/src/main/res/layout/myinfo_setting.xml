@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginTop="15dip"
+                android:background="@color/divider2bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="49dip"
+                android:background="@color/white" >
+
+                <EditText
+                    android:id="@+id/edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toLeftOf="@+id/oldclear"
+                    android:background="@null"
+                    android:paddingLeft="7dip"
+                    android:paddingRight="7dip"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textColorHint="#d3d3d3"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:src="@drawable/btn_editclear"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:background="@color/divider2bg" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

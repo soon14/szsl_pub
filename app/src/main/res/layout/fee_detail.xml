@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/fee_detail_head_bg"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/fee_detail_head"/>
+
+        <TextView
+            android:id="@+id/tv_fee_detail_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="就诊科室"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_fee_detail_dept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_fee_detail_1"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_fee_detail_1"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_fee_detail_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_fee_detail_1"
+            android:layout_below="@+id/tv_fee_detail_1"
+            android:text="就诊医生"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_fee_detail_doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_fee_detail_dept"
+            android:layout_alignTop="@+id/tv_fee_detail_2"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_fee_detail_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_fee_detail_2"
+            android:layout_below="@+id/tv_fee_detail_2"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_fee_detail_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_fee_detail_doctor"
+            android:layout_alignTop="@+id/tv_fee_detail_3"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#F0F0F0"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:text="项目/规格"
+            android:textColor="@color/gray"/>
+
+        <TextView
+            android:id="@+id/tv_fee_title_sum"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="金额"
+            android:textColor="@color/gray"/>
+
+        <TextView
+            android:id="@+id/tv_fee_title_scale"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/tv_fee_title_sum"
+            android:layout_toStartOf="@id/tv_fee_title_sum"
+            android:gravity="center"
+            android:text="自费比例"
+            android:textColor="@color/gray"/>
+
+        <TextView
+            android:id="@+id/tv_fee_title_price"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/tv_fee_title_scale"
+            android:layout_toStartOf="@id/tv_fee_title_scale"
+            android:gravity="center"
+            android:text="单价"
+            android:textColor="@color/gray"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/tv_fee_title_price"
+            android:layout_toStartOf="@id/tv_fee_title_price"
+            android:gravity="center"
+            android:text="数量"
+            android:textColor="@color/gray"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="#F0F0F0"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/list_fee_detail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_pay"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/view_line"
+            android:layout_margin="10dp"
+            android:background="@drawable/bigbut_blue"
+            android:text="在线支付"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+    </LinearLayout>
+</LinearLayout>

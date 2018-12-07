@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <LinearLayout
+        android:id="@+id/hisLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="5dip"
+            android:text="最近访问"
+            android:textColor="@color/gray_text"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/hisDeptLay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dip"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <ListView
+                android:id="@+id/listViewMenu"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="4"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:fadingEdge="none"
+                android:listSelector="@android:color/transparent"
+                android:scrollingCache="false" >
+            </ListView>
+
+            <ListView
+                android:id="@+id/listViewList"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/divider2white"
+                android:dividerHeight="1dp"
+                android:fadingEdge="none"
+                android:listSelector="@android:color/transparent"
+                android:paddingLeft="15dip"
+                android:scrollingCache="false" >
+            </ListView>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/emptyProgress"
+            style="@android:style/Widget.ProgressBar.Large.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

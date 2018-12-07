@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_headquarters"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="本部"
+            android:textColor="@color/bluepw"/>
+
+        <View
+            style="@style/style_line"/>
+
+        <TextView
+            android:id="@+id/tv_eastern_district"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="东区"
+            android:textColor="@color/bluepw"/>
+
+        <View
+            style="@style/style_line"/>
+
+
+        <TextView
+            android:id="@+id/tv_north_district"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="北区"
+            android:textColor="@color/bluepw"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_white"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/bluepw"/>
+
+</LinearLayout>

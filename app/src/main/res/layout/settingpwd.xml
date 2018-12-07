@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/bg"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginTop="15dip"
+                android:background="@color/divider2bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/oldclear"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dip"
+                        android:text="原密码"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/old"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:hint="输入原密码"
+                        android:maxLength="20"
+                        android:paddingLeft="7dip"
+                        android:paddingRight="7dip"
+                        android:password="true"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textColorHint="#d3d3d3"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/oldclear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:src="@drawable/btn_editclear"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:background="@color/divider2bg" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginTop="10dp"
+                android:background="@color/divider2bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/newclear"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dip"
+                        android:text="新密码"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/newpwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:hint="输入新密码"
+                        android:maxLength="20"
+                        android:paddingLeft="7dip"
+                        android:paddingRight="7dip"
+                        android:password="true"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textColorHint="#d3d3d3"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/newclear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:src="@drawable/btn_editclear"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+             <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:background="@color/divider2bg" />
+              <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginTop="10dp"
+                android:background="@color/divider2bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/second_newclear"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dip"
+                        android:text="确认新密码"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/second_newpwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:hint="确认新密码"
+                        android:maxLength="20"
+                        android:paddingLeft="7dip"
+                        android:paddingRight="7dip"
+                        android:password="true"
+                        android:singleLine="true"
+                        android:textColor="#000000"
+                        android:textColorHint="#d3d3d3"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/second_newclear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:src="@drawable/btn_editclear"
+                    android:visibility="gone" />
+            </RelativeLayout>
+             <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:background="@color/divider2bg" />
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="35dip"
+                android:background="@drawable/bigbut_blue"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="22sp" 
+                />
+        </LinearLayout>
+</LinearLayout>

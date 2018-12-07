@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_gray"
+              android:orientation="vertical">
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar">
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                style="@style/ll_jcxq_style"
+                >
+
+                <ImageView
+                    style="@style/iv_jcxq_style"
+                    android:background="@drawable/jcxm"
+                    />
+
+                <TextView
+                    style="@style/tv_jcxq_title_style"
+                    android:text="检查项目"
+                    />
+
+                <TextView
+                    android:id="@+id/text1"
+                    style="@style/tv_jcxq_content_style"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#d9d9d9"/>
+
+            <LinearLayout
+                style="@style/ll_jcxq_style"
+                >
+
+                <ImageView
+                    style="@style/iv_jcxq_style"
+                    android:background="@drawable/time"
+                    />
+
+                <TextView
+                    style="@style/tv_jcxq_title_style"
+                    android:text="检查时间"
+                    />
+
+                <TextView
+                    android:id="@+id/text2"
+                    style="@style/tv_jcxq_content_style"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#d9d9d9"/>
+
+            <LinearLayout
+                style="@style/ll_jcxq_style"
+                >
+
+                <ImageView
+                    style="@style/iv_jcxq_style"
+                    android:background="@drawable/jcys"
+                    />
+
+                <TextView
+                    style="@style/tv_jcxq_title_style"
+                    android:text="检查医生"
+                    />
+
+                <TextView
+                    android:id="@+id/text3"
+                    style="@style/tv_jcxq_content_style"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dip"
+                android:background="#d9d9d9"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="15dp"
+                android:background="#f2f2f2"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dip"
+                android:background="#d9d9d9"/>
+
+            <LinearLayout
+                style="@style/ll_jcxq_style"
+                >
+
+                <ImageView
+                    style="@style/iv_jcxq_style"
+                    android:background="@drawable/jczd"
+                    />
+
+                <TextView
+                    style="@style/tv_jcxq_title_style"
+                    android:text="检查诊断"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#d9d9d9"/>
+
+            <LinearLayout
+                style="@style/ll_jcxq_style"
+                >
+
+                <TextView
+                    android:id="@+id/text4"
+                    style="@style/tv_jcxq_content_style"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:background="#d9d9d9"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="15dp"
+                android:background="#f2f2f2"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dip"
+                android:background="#d9d9d9"/>
+
+            <LinearLayout
+                style="@style/ll_jcxq_style"
+                >
+
+                <ImageView
+                    style="@style/iv_jcxq_style"
+                    android:background="@drawable/jcms"
+                    />
+
+                <TextView
+                    style="@style/tv_jcxq_title_style"
+                    android:text="检查描述"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#d9d9d9"/>
+
+            <LinearLayout
+                style="@style/ll_jcxq_style"
+                >
+
+                <TextView
+                    android:id="@+id/text5"
+                    style="@style/tv_jcxq_content_style"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dip"
+                android:background="#d9d9d9"/>
+
+            <LinearLayout
+                style="@style/ll_jcxq_style"
+                >
+
+                <ImageView
+                    style="@style/iv_jcxq_style"
+                    android:background="@drawable/images_graphic"
+                    />
+
+                <TextView
+                    style="@style/tv_jcxq_title_style"
+                    android:text="影像资料"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dip"
+                android:background="#d9d9d9"/>
+
+                <com.bsoft.hospital.pub.suzhoumh.view.MyGridView
+                    android:id="@+id/grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_gray"
+                    android:horizontalSpacing="1dp"
+                    android:numColumns="3"
+                    android:verticalSpacing="1dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#f2f2f2"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

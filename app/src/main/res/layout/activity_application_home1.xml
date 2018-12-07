@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.app.tanklib.view.BsoftActionBar
+            android:id="@+id/actionbar"
+            style="@style/BsoftActionBar"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_logo"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_banner"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="centerCrop"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.bsoft.hospital.pub.suzhoumh.view.SlideShowView
+                android:id="@+id/slideShowView"
+                android:layout_width="fill_parent"
+                android:layout_height="165dp"
+                android:background="@drawable/sl_image01"
+                android:scaleType="centerCrop"/>
+
+            <LinearLayout
+                android:id="@+id/today_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#d2e6ff"
+                android:paddingBottom="6dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="6dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/info"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="医院的通知与公告"
+                    android:textSize="15sp"/>
+
+                <Button
+                    android:id="@+id/btn_hospital_select"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:text="院区切换"
+                    android:textSize="10dp"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/hospital_select_bg"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/home_layout_vertical_style"
+                        android:layout_height="100dp">
+
+                        <LinearLayout
+                            android:id="@+id/ll_yygh"
+                            style="@style/home_layout_horizontal_style">
+
+                            <LinearLayout
+                                style="@style/home_layout_child_style"
+                                android:background="@drawable/bg_home_1"/>
+
+                            <TextView
+                                style="@style/home_text_style"
+                                android:text="预约挂号"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_qdqh"
+                            style="@style/home_layout_horizontal_style">
+
+                            <LinearLayout
+                                style="@style/home_layout_child_style"
+                                android:background="@drawable/bg_home_8"/>
+
+                            <TextView
+                                style="@style/home_text_style"
+                                android:text="签到取号"/>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_jzjh"
+                            style="@style/home_layout_horizontal_style">
+
+                            <LinearLayout
+                                style="@style/home_layout_child_style"
+                                android:background="@drawable/bg_home_4"/>
+
+                            <TextView
+                                style="@style/home_text_style"
+                                android:text="就诊叫号"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/home_layout_vertical_style"
+                        android:layout_height="100dp">
+
+                        <LinearLayout
+                            android:id="@+id/ll_zszf"
+                            style="@style/home_layout_horizontal_style">
+
+                            <LinearLayout
+                                style="@style/home_layout_child_style"
+                                android:background="@drawable/bg_home_5"/>
+
+                            <TextView
+                                style="@style/home_text_style"
+                                android:text="掌上支付"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_bgcx"
+                            style="@style/home_layout_horizontal_style">
+
+                            <LinearLayout
+                                style="@style/home_layout_child_style"
+                                android:background="@drawable/bg_home_2"/>
+
+                            <TextView
+                                style="@style/home_text_style"
+                                android:text="报告查询"/>
+                        </LinearLayout>
+
+                        <!--功能暂时不需要 gone 专家排班-->
+                        <LinearLayout
+                            android:id="@+id/ll_zjpb"
+                            style="@style/home_layout_horizontal_style"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                style="@style/home_layout_child_style"
+                                android:background="@drawable/bg_home_3"/>
+
+                            <TextView
+                                style="@style/home_text_style"
+                                android:text="专家排班"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_jzls"
+                            style="@style/home_layout_horizontal_style">
+
+                            <LinearLayout
+                                style="@style/home_layout_child_style"
+                                android:background="@drawable/bg_home_jzls"/>
+
+                            <TextView
+                                style="@style/home_text_style"
+                                android:text="就诊历史"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/home_layout_vertical_style"
+                        android:layout_height="100dp">
+
+                        <LinearLayout
+                            android:id="@+id/ll_zyyw"
+                            style="@style/home_layout_horizontal_style">
+
+                            <LinearLayout
+                                style="@style/home_layout_child_style"
+                                android:background="@drawable/bg_home_more"/>
+
+                            <TextView
+                                style="@style/home_text_style"
+                                android:text="住院业务"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_tcsf"
+                            style="@style/home_layout_horizontal_style">
+
+                            <LinearLayout
+                                style="@style/home_layout_child_style"
+                                android:background="@drawable/tcsf"/>
+
+                            <TextView
+                                style="@style/home_text_style"
+                                android:text="停车缴费"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_yndh"
+                            style="@style/home_layout_horizontal_style">
+
+                            <LinearLayout
+                                style="@style/home_layout_child_style"
+                                android:background="@drawable/yndh"/>
+
+                            <TextView
+                                style="@style/home_text_style"
+                                android:text="院内导航"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="15dp"
+                    android:background="@color/bg"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_home_yyjs"
+                        style="@style/home_other_layout_style">
+
+                        <TextView
+                            android:id="@+id/tv_title_1"
+                            style="@style/home_other_text_title_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="医院介绍"/>
+
+                        <TextView
+                            style="@style/home_other_text_desc_style"
+                            android:layout_width="wrap_content"
+                            android:layout_below="@+id/tv_title_1"
+                            android:text="发展历程 信息介绍"/>
+
+                        <ImageView
+                            style="@style/home_other_image_style"
+                            android:background="@drawable/bg_yyjs"/>
+                    </RelativeLayout>
+
+                    <View style="@style/home_space_vertical_style"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_home_sbbx"
+                        style="@style/home_other_layout_style"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_title_2"
+                            style="@style/home_other_text_title_style"
+                            android:text="商保报销"/>
+
+                        <TextView
+                            style="@style/home_other_text_desc_style"
+                            android:layout_below="@+id/tv_title_2"
+                            android:text="商业保险 快捷理赔"/>
+
+                        <ImageView
+                            style="@style/home_other_image_style"
+                            android:background="@drawable/ic_yydjt2"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View style="@style/home_space_horizontal_style"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_home_jkgj"
+                            style="@style/home_other_layout_style">
+
+                            <TextView
+                                android:id="@+id/tv_title_3"
+                                style="@style/home_other_text_title_style"
+                                android:text="健康工具"/>
+
+                            <TextView
+                                style="@style/home_other_text_desc_style"
+                                android:layout_below="@+id/tv_title_3"
+                                android:text="服药提醒 药品知识"/>
+
+                            <ImageView
+                                style="@style/home_other_image_style"
+                                android:background="@drawable/bg_jkgj"/>
+                        </RelativeLayout>
+
+                        <View style="@style/home_space_vertical_style"/>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_home_jktj"
+                            style="@style/home_other_layout_style">
+
+                            <TextView
+                                android:id="@+id/tv_title_4"
+                                style="@style/home_other_text_title_style"
+                                android:text="健康体检"/>
+
+                            <TextView
+                                style="@style/home_other_text_desc_style"
+                                android:layout_below="@+id/tv_title_4"
+                                android:text="健康教育 体检健康"/>
+
+                            <ImageView
+                                style="@style/home_other_image_style"
+                                android:background="@drawable/ic_jktj"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View style="@style/home_space_horizontal_style"/>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/bg"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

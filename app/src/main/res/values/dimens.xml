@@ -1,0 +1,15 @@
+<resources>
+
+    <dimen name="slidingmenu_offset">60dip</dimen>
+    <dimen name="shadow_width">15dip</dimen>
+    <dimen name="mslidingmenu_offset">250dip</dimen>
+    
+    <dimen name="bg_home_cornor">4dip</dimen>
+    <dimen name="text_size13">13sp</dimen>
+    <dimen name="text_size12">12sp</dimen>
+    <dimen name="padding_7">7dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+
+</resources>

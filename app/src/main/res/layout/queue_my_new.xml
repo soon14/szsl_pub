@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+
+    >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar">
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_queue_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="150dp"
+                >
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="25dp"
+                    android:background="#83cd6a"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/queue_icon_first_bg"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:background="@drawable/queue_num_bg"
+                        android:orientation="horizontal"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_num"
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="排队号"
+                                android:textColor="@color/white"
+                                android:textSize="17sp"
+                                />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:background="@color/white"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_wait"
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="前面等待"
+                                android:textColor="@color/white"
+                                android:textSize="17sp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                >
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="25dp"
+                    android:background="#83cd6a"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/queue_icon_second_bg"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:background="@drawable/queue_info_bg"
+                        android:orientation="horizontal"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:padding="25dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_dept"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="内科"
+                                android:textColor="#333333"
+                                android:textSize="17sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_consult"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/tv_dept"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@id/tv_dept"
+                                android:text=""
+                                android:textColor="#333333"
+                                android:textSize="17sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_doctor_tip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_dept"
+                                android:layout_marginTop="10dp"
+                                android:text="就诊医生:"
+                                android:textColor="#999999"
+                                android:textSize="17sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_doctor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_dept"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_toRightOf="@+id/tv_doctor_tip"
+                                android:text=""
+                                android:textColor="#333333"
+                                android:textSize="17sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_name_tip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_doctor"
+                                android:layout_marginTop="10dp"
+                                android:text="就诊人:"
+                                android:textColor="#999999"
+                                android:textSize="17sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@+id/tv_doctor"
+                                android:layout_below="@+id/tv_doctor"
+                                android:layout_marginTop="10dp"
+                                android:layout_toRightOf="@+id/tv_name_tip"
+                                android:text=""
+                                android:textColor="#333333"
+                                android:textSize="17sp"
+                                />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#d9d9d9"/>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:paddingTop="25dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_tip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="当前"
+                                android:textColor="#999999"
+                                android:textSize="17sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_current_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_tip"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:text=""
+                                android:textSize="22sp"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_my_queue"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible">
+
+            <com.app.tanklib.pulltorefresh.PullToRefreshListView
+                android:id="@+id/pull_refresh_list"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:dividerHeight="1dp"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:listSelector="@android:color/transparent"
+                android:paddingTop="0dp"
+                android:smoothScrollbar="true"
+                ptr:ptrAnimationStyle="flip"
+                ptr:ptrDrawable="@drawable/ic_refresh_arrow"
+                ptr:ptrHeaderSubTextColor="@android:color/black"
+                ptr:ptrHeaderTextColor="@android:color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_my_queue_empty"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/queue_my_empty"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前您没有排队"
+                android:textColor="#cccccc"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_queue"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@color/line_color"
+            android:dividerHeight="0.5dp"
+            android:visibility="gone"
+            ></ListView>
+    </LinearLayout>
+</LinearLayout>

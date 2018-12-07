@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- base -->
+    <color name="white">#FFFFFF</color>
+    <color name="white30">#30FFFFFF</color>
+    <color name="black">#212121</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#FF0000</color>
+     <color name="gray">#8D8A85</color>
+    <!-- end base -->
+    <color name="md__defaultBackground">#FF555555</color>
+    <!-- Appmsg -->
+    <color name="appmsg_alert">#CC0000</color>
+    <color name="appmsg_confirm">#FF8800</color>
+    <color name="appmsg_info">#669900</color>
+    <color name="custom">#ff0099CC</color>
+    <color name="sticky">#ffffcd5a</color>
+    <!-- NetImagView -->
+    <color name="image_backgroud">#cccccc</color>
+    <!-- TabPages -->
+    <color name="tab_indicator_text_selected">#00AC8B</color>
+    <color name="tab_indicator_text_selected2">#0177D9</color>
+    <color name="tab_indicator_text_unselected">#8F8C87</color>
+    <color name="dialog_text">#50c1c0c0</color>
+    
+</resources>

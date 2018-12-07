@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.app.tanklib.view.TitleIndicator
+        android:id="@+id/pagerindicator"
+        android:layout_width="fill_parent"
+        android:layout_height="34dp"
+        android:background="#1fac8c"
+        app:footerColor="@color/transparent"
+        app:footerLineHeight="2dip"
+        app:footerTriangleHeight="3.0dip"
+        app:textColor="@drawable/tab_indicator_text"
+        app:textSizeNormal="14dip"
+        app:textSizeSelected="14dip" />
+
+    <!-- Don't set background for ViewPager. It doesn't work because of page margin -->
+
+    <com.app.tanklib.view.ViewPagerCompat
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:duplicateParentState="true" />
+
+</LinearLayout>

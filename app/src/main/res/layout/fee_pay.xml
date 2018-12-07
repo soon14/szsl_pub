@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg">
+
+                    <TextView
+                        android:id="@+id/tv_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="获取数据中..."
+                        android:textColor="#ff5010"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg"
+                android:padding="10dp"
+                android:text="请选择支付方式"
+                android:textColor="#999999"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:id="@+id/lay_szyb_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_6"
+                    style="@style/pay_layout">
+
+                    <ImageView
+                        style="@style/pay_image"
+                        android:src="@drawable/icon_szyb" />
+
+                    <LinearLayout style="@style/pay_layout2">
+
+                        <TextView
+                            style="@style/pay_text"
+                            android:text="苏州医保支付" />
+
+                        <TextView
+                            style="@style/pay_text2"
+                            android:text="苏州医保支付" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/checkbox6"
+                        style="@style/pay_checkbox" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_yqyb_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_5"
+                    style="@style/pay_layout">
+
+                    <ImageView
+                        style="@style/pay_image"
+                        android:src="@drawable/icon_yqyb" />
+
+                    <LinearLayout style="@style/pay_layout2">
+
+                        <TextView
+                            style="@style/pay_text"
+                            android:text="园区医保支付" />
+
+                        <TextView
+                            style="@style/pay_text2"
+                            android:text="园区医保手机支付app支付" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/checkbox5"
+                        style="@style/pay_checkbox" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_other_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_1"
+                    style="@style/pay_layout">
+
+                    <ImageView
+                        style="@style/pay_image"
+                        android:src="@drawable/icon_szyy" />
+
+                    <LinearLayout style="@style/pay_layout2">
+
+                        <TextView
+                            style="@style/pay_text"
+                            android:text="苏州银行手机支付" />
+
+                        <TextView
+                            style="@style/pay_text2"
+                            android:text="苏州银行手机支付app支付" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/checkbox1"
+                        style="@style/pay_checkbox" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:id="@+id/ll_4"
+                    style="@style/pay_layout">
+
+                    <ImageView
+                        style="@style/pay_image"
+                        android:src="@drawable/icon_yl" />
+
+                    <LinearLayout style="@style/pay_layout2">
+
+                        <TextView
+                            style="@style/pay_text"
+                            android:text="银联在线支付" />
+
+                        <TextView
+                            style="@style/pay_text2"
+                            android:text="支持银联卡在线支付" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/checkbox4"
+                        style="@style/pay_checkbox" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:id="@+id/ll_3"
+                    style="@style/pay_layout">
+
+                    <ImageView
+                        style="@style/pay_image"
+                        android:src="@drawable/icon_zfb" />
+
+                    <LinearLayout style="@style/pay_layout2">
+
+                        <TextView
+                            style="@style/pay_text"
+                            android:text="支付宝支付" />
+
+                        <TextView
+                            style="@style/pay_text2"
+                            android:text="支付宝支付" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/checkbox3"
+                        style="@style/pay_checkbox" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:id="@+id/ll_2"
+                    style="@style/pay_layout">
+
+                    <ImageView
+                        style="@style/pay_image"
+                        android:src="@drawable/icon_wx" />
+
+                    <LinearLayout style="@style/pay_layout2">
+
+                        <TextView
+                            style="@style/pay_text"
+                            android:text="微信支付" />
+
+                        <TextView
+                            style="@style/pay_text2"
+                            android:text="建设中，敬请期待" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/checkbox2"
+                        style="@style/pay_checkbox" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_color" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bigbut_blue"
+                android:text="确认支付"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

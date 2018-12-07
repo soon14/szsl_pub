@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dip"
+        android:layout_marginTop="15dip"
+        android:background="@color/divider2bg" />
+
+    <EditText android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="请填写意见反馈"
+        android:padding="20dip"
+        android:textColor="@color/black"
+        android:textColorHint="#d3d3d3"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dip"
+        android:background="@color/divider2bg" />
+
+</LinearLayout>

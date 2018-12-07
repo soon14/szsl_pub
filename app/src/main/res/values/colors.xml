@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#06b8dc</color>
+    <color name="colorPrimaryDark">#06b8dc</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="bluepw">#9906b8dc</color>
+    <color name="bluepress">#5506b8dc</color>
+    <color name="black70">#30212121</color>
+    <!-- <color name="blue">#1a9de1</color> -->
+    <!-- <color name="blue">#458ecc</color> -->
+    <color name="blue">#06b8dc</color>
+    <color name="orange">#BBFFA600</color>
+    <color name="menu_divider">#585858</color>
+    <color name="menu_bg">#343434</color>
+    <color name="menu_text">#cacaca</color>
+    <color name="menu_select">#494949</color>
+    <!-- <color name="actionbar_bg">#1fac8c</color> -->
+    <!-- <color name="actionbar_bg">#458ecc</color> -->
+    <color name="actionbar_bg">#06b8dc</color>
+    <color name="bg">#f2f2f2</color>
+    <color name="selectbg">#50e6e6e6</color>
+    <color name="divider2bg">#c1c0c0</color>
+    <color name="divider2white">#d3d3d3</color>
+    <color name="itemselect">#757575</color>
+    <color name="image_backgroud">#cccccc</color>
+    <color name="pwdtest1">#f37132</color>
+    <color name="pwdtest2">#969696</color>
+    <color name="orange2">#F1B55F</color>
+    <color name="appoint_text">#b6b6b6</color>
+    <color name="h_text">#aeaeaa</color>
+    <color name="weather">#80C268</color>
+    <color name="gray_text">#8D8A85</color>
+    <color name="lis_color">#468FD5</color>
+    <color name="ris_color">#48F162</color>
+    <color name="cycle_txx_color">#979797</color>
+    <color name="bg_search">#ffbababa</color>
+    <color name="search_bg_color">#D2D2D2</color>
+    <color name="bg_common_p">#ecedf1</color>
+    <color name="common_vice_textcolor">#9b9b9b</color>
+    <color name="color_green">#a3e520</color>
+    <color name="color_news_title">#33b5e5</color>
+    <color name="black_text">#333333</color>
+    <color name="line_color">#d9d9d9</color>
+    <color name="gray_color">#999999</color>
+
+    <!-- 首页 normal-->
+    <color name="home_1_n">#ff9c9c</color>
+    <color name="home_2_n">#94d6fc</color>
+    <color name="home_3_n">#f4affe</color>
+    <color name="home_4_n">#f3dc73</color>
+    <color name="home_5_n">#9fa4ff</color>
+    <color name="home_6_n">#ebaeae</color>
+    <color name="home_7_n">#b6d67e</color>
+    <color name="home_8_n">#fec772</color>
+    <color name="home_9_n">#78efc9</color>
+
+    <!-- 首页 press -->
+    <color name="home_1_p">#e68c8c</color>
+    <color name="home_2_p">#87c3e6</color>
+    <color name="home_3_p">#dc9ee6</color>
+    <color name="home_4_p">#e6cf6c</color>
+    <color name="home_5_p">#969bf2</color>
+    <color name="home_6_p">#e6aaaa</color>
+    <color name="home_7_p">#adcc78</color>
+    <color name="home_8_p">#f2bf6d</color>
+    <color name="home_9_p">#71e3df</color>
+
+    <!-- 健康检测的每个项目的颜色 -->
+    <color name="monitor_1_1">#ff9c9c</color>
+    <color name="monitor_1_2">#33c90f</color>
+    <color name="monitor_2">#94d6fc</color>
+    <color name="monitor_3">#f4affe</color>
+    <color name="monitor_4">#f3dc73</color>
+    <color name="monitor_5">#9fa4ff</color>
+    <color name="monitor_6">#ebaeae</color>
+    <color name="monitor_7">#b6d67e</color>
+    <color name="monitor_8">#fec772</color>
+    <color name="monitor_9">#78efc9</color>
+
+    <color name="dept_text_color_1">#9be6f5</color>
+    <color name="dept_text_color_2">#ffacac</color>
+    <color name="dept_text_color_3">#fceb8a</color>
+
+
+    <!-- Scan -->
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="tag_bg">#FF000000</color>
+
+    <color name="check_text">#1fac8c</color>
+    <color name="hint_text">#d3d3d3</color>
+
+    <!--首页颜色-->
+    <color name="hospital_introduce">#FF895A</color>
+    <color name="hint_color_below">#999999</color>
+    <color name="health_tools">#2CB3EB</color>
+    <color name="heatth_test">#0ED1C1</color>
+
+
+    <color name="red_date">#DC3C3C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#55888888</color>
+    <color name="bg_gray">#F2f2f2</color>
+
+
+    <color name="orange_date">#FFA400</color>
+    <color name="gray_date">#ECECEC</color>
+    <color name="blue_date">#9906b8dc</color>
+    <color name="green_date">#C3EF7C</color>
+
+    <color name="gray_common">#999</color>
+</resources>

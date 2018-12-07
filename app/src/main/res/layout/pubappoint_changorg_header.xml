@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="5dip"
+        android:text="最近访问"
+        android:textColor="@color/gray_text"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/hisHosLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dip"
+        android:orientation="vertical" >
+    </LinearLayout>
+    
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="5dip"
+        android:text="全部社区"
+        android:textColor="@color/gray_text"
+        android:textSize="15sp" />
+
+</LinearLayout>

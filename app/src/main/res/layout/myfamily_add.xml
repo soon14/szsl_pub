@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:background="@color/divider2bg" />
+                
+                <LinearLayout
+                    style="@style/settingLayout"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="90dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19dip"
+                        android:text="姓名"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="请输入真实姓名"
+                        android:maxLength="20"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="#d3d3d3"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:layout_marginLeft="16dip"
+                    android:background="@color/divider2white" />
+				
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="49dip"
+                    android:background="@color/white" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/idcardclear"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="19dip"
+                            android:text="身份证号"
+                            android:textColor="@color/actionbar_bg"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/idcard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="输入身份证号"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="#d3d3d3"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/idcardclear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dip"
+                        android:src="@drawable/btn_editclear"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:layout_marginLeft="16dip"
+                    android:background="@color/divider2white" />
+
+                <RelativeLayout
+                    android:id="@+id/sexLayout"
+                    style="@style/settingLayout" >
+
+                    <TextView
+                        android:id="@+id/sextext"
+                        android:layout_width="90dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dip"
+                        android:text="性别"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/sextext"
+                        android:text="请选择"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dip"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:layout_marginLeft="16dip"
+                    android:background="@color/divider2white" />
+                <RelativeLayout
+                    android:id="@+id/natureLayout"
+                    style="@style/settingLayout" >
+
+                    <TextView
+                        android:id="@+id/naturetext"
+                        android:layout_width="90dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dip"
+                        android:text="人员性质"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/nature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/naturetext"
+                        android:text="请选择"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dip"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+				<View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:layout_marginLeft="16dip"
+                    android:background="@color/divider2white" />
+                <RelativeLayout
+                    android:id="@+id/birthdayLayout"
+                    style="@style/settingLayout" 
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/birthdaytext"
+                        android:layout_width="90dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dip"
+                        android:text="出生日期"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/birthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/birthdaytext"
+                        android:text="请选择"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dip"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:layout_marginLeft="16dip"
+                    android:background="@color/divider2white" 
+                    android:visibility="gone"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="49dip"
+                    android:background="@color/white" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/mobileclear"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="19dip"
+                            android:text="手机号码"
+                            android:textColor="@color/actionbar_bg"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="请输入真实手机号码"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="#d3d3d3"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/mobileclear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dip"
+                        android:src="@drawable/btn_editclear"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:layout_marginLeft="16dip"
+                    android:background="@color/divider2white" />
+				<RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="49dip"
+                    android:background="@color/white" 
+                    android:visibility="gone"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/cardclear"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="90dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="19dip"
+                            android:text="就诊卡号"
+                            android:textColor="@color/actionbar_bg"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/card1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="请输入真实就诊卡号"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="#d3d3d3"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/cardclear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dip"
+                        android:src="@drawable/btn_editclear"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:layout_marginLeft="16dip"
+                    android:background="@color/divider2white" 
+                    android:visibility="gone"
+                    />
+                <RelativeLayout
+                    android:id="@+id/relationLayout"
+                    style="@style/settingLayout" >
+
+                    <TextView
+                        android:id="@+id/relationtext"
+                        android:layout_width="90dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="19dip"
+                        android:text="关系"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/relation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/relationtext"
+                        android:text="请选择"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dip"
+                        android:src="@drawable/arrow_right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:background="@color/divider2bg" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/del"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+                android:layout_marginTop="37dip"
+                android:background="@drawable/bigbut_blue"
+                android:gravity="center"
+                android:text="删除联系人"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar">
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg"
+        >
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/lay_bottom"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/divider2white"
+            android:dividerHeight="1dp"
+            android:scrollbars="none"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent"
+            android:scrollingCache="false">
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/lay_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="待支付项目："
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="显示末支付项目，医保病人医保线上支付后，现金部分同自费病人一样可选择苏州银行、银联、支付宝、微信支付等方式支付。"
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="已支付项目："
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="显示已支付项目的条码，可凭此条码到药房窗口取药、检验科化验，检查科室检查。"
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="发票打印："
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="如需发票，请至自助机扫码打印。"
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="退款处理："
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="如需退款，市区及园区参保客户请持市民卡及发票、自费客户持发票至窗口办理。"
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

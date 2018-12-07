@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="left|center" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:text="请选择时间"
+            android:textColor="#999999" />
+    </RelativeLayout>
+    
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#cccccc" />
+
+    <GridView
+        android:id="@+id/show_gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnWidth="99dp"
+        android:gravity="center"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        android:visibility="gone" />
+    
+    <TextView 
+        android:id="@+id/show_tv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="该时段号源已被预约完"
+        android:textColor="#2f4f4f"
+        android:textSize="17dp"
+        />
+	 <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#cccccc" />
+	<Button
+	    android:id="@+id/btn_back"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@null"
+	    android:contentDescription="@null"
+	    android:text="返回"
+	    android:textColor="@color/actionbar_bg"
+	    android:textSize="16dp" >
+	</Button>
+
+</LinearLayout>

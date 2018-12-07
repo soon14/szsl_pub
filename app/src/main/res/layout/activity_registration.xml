@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar">
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_mzhm"
+                style="@style/style_registration_tv" />
+            <TextView
+                android:id="@+id/tv_jzxh"
+                style="@style/style_registration_tv"
+                />
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/style_registration_tv"
+                />
+            <TextView
+                android:id="@+id/tv_gender"
+                style="@style/style_registration_tv"
+                />
+            <TextView
+                android:id="@+id/tv_age"
+                style="@style/style_registration_tv"
+                />
+            <TextView
+                android:id="@+id/tv_jzwz"
+                style="@style/style_registration_tv"
+                />
+            </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

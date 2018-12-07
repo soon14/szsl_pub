@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="46dip"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dip"
+        android:text="11"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dip"
+        android:background="@color/divider2white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dip"
+        android:layout_marginTop="15dip"
+        android:background="@color/divider2white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dip"
+            android:src="@drawable/icon_routedetail_start" />
+
+        <TextView
+            android:id="@+id/starttext"
+            android:layout_width="wrap_content"
+            android:layout_height="67dip"
+            android:layout_marginLeft="10dip"
+            android:gravity="center_vertical"
+            android:text="11"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar">
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapsView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true"/>
+
+        <LinearLayout
+            android:id="@+id/ll_buttom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/btn_medic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_map"
+                android:drawableTop="@drawable/ic_medic"
+                android:text="药店"
+                android:textColor="@color/cycle_txx_color"/>
+
+            <Button
+                android:id="@+id/btn_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_map"
+                android:drawableTop="@drawable/ic_bank"
+                android:text="银行"
+                android:textColor="@color/cycle_txx_color"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_detail"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="体检详情"
+                android:textColor="@color/blue"
+                android:textSize="17sp"/>
+
+            <ImageView
+                android:id="@+id/iv_detail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/tv_detail"
+                android:layout_alignLeft="@id/tv_detail"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@id/tv_detail"
+                android:layout_alignStart="@id/tv_detail"
+                android:background="@drawable/line_title"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_review"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="体检综述"
+                android:textSize="17sp"/>
+
+            <ImageView
+                android:id="@+id/iv_review"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/tv_review"
+                android:layout_alignLeft="@id/tv_review"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@id/tv_review"
+                android:layout_alignStart="@id/tv_review"
+                android:background="@drawable/line_title"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#D1D1D1"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"/>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:textSize="17sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/tv_name"
+                        android:layout_toRightOf="@id/tv_name"
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:id="@+id/tv_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/iv_sex"
+                        android:layout_toRightOf="@id/iv_sex"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/tv_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_toLeftOf="@id/tv_num"
+                        android:layout_toStartOf="@id/tv_num"
+                        android:text="体检编号"
+                        android:textColor="@color/gray_text"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_hint_dept"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="单位名称"
+                        android:textColor="@color/gray_text"/>
+
+                    <TextView
+                        android:id="@+id/tv_dept"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_toEndOf="@id/tv_hint_dept"
+                        android:layout_toRightOf="@id/tv_hint_dept"/>
+
+                    <TextView
+                        android:id="@+id/tv_hint_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_hint_dept"
+                        android:layout_marginTop="10dp"
+                        android:text="体检日期"
+                        android:textColor="@color/gray_text"/>
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/tv_hint_date"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_toEndOf="@id/tv_hint_date"
+                        android:layout_toRightOf="@id/tv_hint_date"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#E1E1E1"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/bg"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="综述"
+                    android:textColor="@color/gray_text"
+                    android:textSize="17sp"/>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#E1E1E1"/>
+
+                <TextView
+                    android:id="@+id/tv_summarize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"/>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#E1E1E1"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/bg"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="建议"
+                    android:textColor="@color/gray_text"
+                    android:textSize="17sp"/>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#E1E1E1"/>
+
+                <TextView
+                    android:id="@+id/tv_suggest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/bg"/>
+    </RelativeLayout>
+</LinearLayout>

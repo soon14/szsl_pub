@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dip"
+        android:layout_marginTop="15dip"
+        android:background="@color/divider2bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dip"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:text="服务评价"
+            android:textColor="@color/actionbar_bg"
+            android:textSize="16sp" />
+
+        <RatingBar
+            android:id="@+id/rb_score"
+            style="@style/note_ratingbar_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dip"
+            android:numStars="5" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dip"
+        android:layout_marginTop="15dip"
+        android:background="@color/divider2bg" />
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="请填写评论内容（不多于200字）"
+        android:padding="20dip"
+        android:textColor="@color/black"
+        android:textColorHint="#d3d3d3"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dip"
+        android:background="@color/divider2bg" />
+
+</LinearLayout>

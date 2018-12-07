@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ecardlib</string>
+    <string name="md__drawerOpenIndicatorDesc">Close drawer</string>
+    <string name="md__drawerClosedIndicatorDesc">Open drawer</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新…</string>
+    <string name="pull_to_refresh_release_label">放开以刷新…</string>
+    <string name="pull_to_refresh_refreshing_label">正在载入…</string>
+    <string name="pull_to_refresh_from_bottom_pull_label">下拉刷新…</string>
+    <string name="pull_to_refresh_from_bottom_release_label">放开以刷新…</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">正在载入…</string>
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+    <string name="notif_down_file">下载</string>
+    <string name="downloadSuccess">下载成功，点击安装</string>
+    <string name="downloadFailure">下载失败，点击返回</string>
+    <string name="dialog_close">关闭</string>
+
+    <!-- EmptyLayout -->
+    <string name="empty_message">没有任务信息哦</string>
+    <string name="loading_message">加载中…</string>
+    <string name="error_message"></string>
+    <string name="empty_button">再试一次</string>
+    <string name="loading_button">取消</string>
+    <string name="error_button">点击重试</string>
+
+</resources>

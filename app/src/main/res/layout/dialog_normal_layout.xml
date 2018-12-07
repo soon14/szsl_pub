@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/corners_bg"
+    android:orientation="vertical" 
+    android:padding="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="设置服药次数"
+                android:textSize="17dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="一二三四五"
+                android:textSize="20dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_times"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="40dp"
+                android:text="一次"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_decrease"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/btn_add"
+                android:background="@drawable/ic_reminder_decrase" />
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_reminder_add" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ll_time1"
+                >
+                <View
+                style="@style/iv_remind_style" />
+            <LinearLayout
+                style="@style/ll_remind_time_style">"
+
+                <TextView
+                    android:id="@+id/textview_begintime1"
+                    android:text="08:00"
+                    style="@style/tv_remind_style"
+                     />
+            </LinearLayout>
+			</LinearLayout>
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ll_time2"
+                >
+            <View
+                style="@style/iv_remind_style" />
+            <LinearLayout
+                android:visibility="visible"
+                style="@style/ll_remind_time_style" 
+                >
+                <TextView
+                    android:id="@+id/textview_begintime2"
+                    android:text="12:00"
+                    style="@style/tv_remind_style" />
+            </LinearLayout>
+            </LinearLayout>
+			<LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ll_time3"
+                >
+            <View
+                style="@style/iv_remind_style" />
+            <LinearLayout
+                android:visibility="visible"
+                style="@style/ll_remind_time_style" 
+                >
+                <TextView
+                    style="@style/tv_remind_style"
+                    android:text="18:00"
+                    android:id="@+id/textview_begintime3"
+                    />
+            </LinearLayout>
+            </LinearLayout>
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ll_time4"
+                >
+             <View
+                style="@style/iv_remind_style" />
+			<LinearLayout
+                style="@style/ll_remind_time_style"
+                android:visibility="visible" >
+           
+                <TextView
+                    android:id="@+id/textview_begintime4"
+                    android:text="21:00"
+                    style="@style/tv_remind_style"
+                     />
+            </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dp"
+            android:background="#ffd0d0d0" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/positiveButton"
+                android:layout_width="0dip"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="确定"
+                android:textSize="18sp" 
+                android:textColor="@color/blue"
+                />
+            <View
+            android:layout_width="1dp"
+            android:layout_height="45dp"
+            android:background="#ffd0d0d0" />
+
+            <Button
+                android:id="@+id/negativeButton"
+                android:layout_width="0dip"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="取消"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

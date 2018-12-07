@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/ll_appoint_history_item_style"
+        android:visibility="gone"
+        >
+
+        <TextView
+            style="@style/tv_appoint_history_item_title_style"
+            android:layout_weight="1"
+            android:text="普通预约"
+            android:textColor="@color/actionbar_bg"
+            />
+
+        <TextView
+            style="@style/tv_appoint_history_item_title_style"
+            android:text="预约成功"
+            android:textColor="@color/actionbar_bg"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_doctor"
+            style="@style/ll_appoint_history_item_style">
+
+            <TextView
+                style="@style/tv_appoint_history_item_title_style"
+                android:text="专家医生"/>
+
+            <TextView
+                android:id="@+id/tv_doctor"
+                style="@style/tv_appoint_history_item_content_style"
+                android:text="胡秀晶"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_1"
+            style="@style/ll_appoint_history_item_style"
+            android:layout_below="@+id/ll_doctor">
+
+            <TextView
+                style="@style/tv_appoint_history_item_title_style"
+                android:text="预约科室"/>
+
+            <TextView
+                android:id="@+id/tv_dept"
+                style="@style/tv_appoint_history_item_content_style"
+                android:text="呼吸内科"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_3"
+            style="@style/ll_appoint_history_item_style"
+            android:layout_below="@+id/ll_1">
+
+            <TextView
+                style="@style/tv_appoint_history_item_title_style"
+                android:text="患者姓名"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/tv_appoint_history_item_content_style"
+                android:text="张三"/>
+
+            <TextView style="@style/tv_content_style"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_4"
+            style="@style/ll_appoint_history_item_style"
+            android:layout_below="@+id/ll_3">
+
+            <TextView
+                style="@style/tv_appoint_history_item_title_style"
+                android:text="预约时间"/>
+
+            <TextView
+                android:id="@+id/tv_yyrq"
+                style="@style/tv_content_style"
+                android:text="2015-9-14"/>
+
+            <TextView
+                android:id="@+id/tv_sjd"
+                style="@style/tv_content_style"
+                android:layout_weight="1"
+                android:text="16:00"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_floor_address"
+            style="@style/ll_appoint_history_item_style"
+            android:layout_below="@+id/ll_4">
+
+            <TextView
+                style="@style/tv_appoint_history_item_title_style"
+                android:text="楼层地址"/>
+
+            <TextView
+                android:id="@+id/tv_floor_address"
+                style="@style/tv_appoint_history_item_content_style"
+                android:text="门诊二楼"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_del"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_text_blue"
+            android:gravity="center"
+            android:text="签到取号"
+            android:textColor="@color/blue"
+            />
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_text_orange"
+            android:gravity="center"
+            android:maxWidth="150dp"
+            android:text="挂号单"
+            android:textColor="@color/orange"
+            android:textSize="14sp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_yndh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_msg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_text_orange"
+            android:gravity="center"
+            android:maxWidth="150dp"
+            android:text="院导航"
+            android:textColor="@color/orange"
+            android:textSize="14sp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+        android:background="@color/bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/tv_djrq"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="2015-09-14 10:18:14"
+            android:textColor="#999999"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+

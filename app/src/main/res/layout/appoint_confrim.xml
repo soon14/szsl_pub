@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar">
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        >
+
+        <View
+            style="@style/line_style"
+            />
+
+        <LinearLayout
+            style="@style/ll_parent_style"
+            >
+
+            <ImageView
+                style="@style/iv_icon_style"
+                android:src="@drawable/person"
+                />
+
+            <TextView
+                style="@style/tv_title_style"
+                android:text="患者姓名"
+                />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/tv_content_style"
+                android:text="张三"
+                />
+        </LinearLayout>
+
+        <View
+            style="@style/line_style"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <LinearLayout
+            style="@style/ll_parent_style"
+            >
+
+            <ImageView
+                style="@style/iv_icon_style"
+                android:src="@drawable/yyrq"
+                />
+
+            <TextView
+                style="@style/tv_title_style"
+                android:text="预约日期"
+                />
+
+            <TextView
+                android:id="@+id/tv_date"
+                style="@style/tv_content_style"
+                android:text="2015-9-10"
+                />
+        </LinearLayout>
+
+        <View
+            style="@style/line_style"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <LinearLayout
+            style="@style/ll_parent_style"
+            >
+
+            <ImageView
+                style="@style/iv_icon_style"
+                android:src="@drawable/time"
+                />
+
+            <TextView
+                style="@style/tv_title_style"
+                android:text="预约时间"
+                />
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/tv_content_style"
+                android:text="8:30"
+                />
+        </LinearLayout>
+
+        <View
+            style="@style/line_style"
+            />
+
+
+        <LinearLayout
+            style="@style/ll_parent_style"
+            >
+
+            <ImageView
+                style="@style/iv_icon_style"
+                android:src="@drawable/ghlb"
+                />
+
+            <TextView
+                style="@style/tv_title_style"
+                android:text="挂号类别"
+                />
+
+            <TextView
+                android:id="@+id/tv_type"
+                style="@style/tv_content_style"
+                android:text="专科门诊"
+                />
+        </LinearLayout>
+
+        <View
+            style="@style/line_style"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <LinearLayout
+            style="@style/ll_parent_style"
+            >
+
+            <ImageView
+                style="@style/iv_icon_style"
+                android:src="@drawable/yyks"
+                />
+
+            <TextView
+                style="@style/tv_title_style"
+                android:text="预约科室"
+                />
+
+            <TextView
+                android:id="@+id/tv_dept"
+                style="@style/tv_content_style"
+                android:text="肝病专科"
+                />
+        </LinearLayout>
+
+        <View
+            style="@style/line_style"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_doctor"
+            style="@style/ll_parent_style"
+            >
+
+            <ImageView
+                style="@style/iv_icon_style"
+                android:src="@drawable/yyzj"
+                />
+
+            <TextView
+                style="@style/tv_title_style"
+                android:text="预约专家"
+                />
+
+            <TextView
+                android:id="@+id/tv_doctor"
+                style="@style/tv_content_style"
+                android:text="孙汉清"
+                />
+        </LinearLayout>
+
+        <View
+            style="@style/line_style"
+            />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bigbut_blue"
+            android:text="立即预约"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+</LinearLayout>

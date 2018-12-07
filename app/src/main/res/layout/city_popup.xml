@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F1F0EE"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/cityLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dip"
+            android:layout_marginLeft="15dip"
+            android:gravity="center_vertical"
+            android:text="请选择市"
+            android:textColor="@color/gray_text"
+            android:textSize="15sp" />
+
+        <GridView
+            android:id="@+id/cityGridView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="13dip"
+            android:gravity="center"
+            android:horizontalSpacing="13dp"
+            android:numColumns="4"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="13dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/countyLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dip"
+            android:layout_marginLeft="15dip"
+            android:gravity="center_vertical"
+            android:text="请选择区"
+            android:textColor="@color/gray_text"
+            android:textSize="15sp" />
+
+        <GridView
+            android:id="@+id/countyGridView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="13dip"
+            android:gravity="center"
+            android:horizontalSpacing="13dp"
+            android:numColumns="4"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="13dip" />
+    </LinearLayout>
+
+</LinearLayout>

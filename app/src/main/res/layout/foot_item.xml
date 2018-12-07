@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imgfoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+    </ImageView>
+    
+    <!-- 显示未读信息的框 -->
+     <com.bsoft.hospital.pub.suzhoumh.view.CountView
+        android:id="@+id/foot_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:visibility="gone" android:layout_marginRight="12dip"/>
+
+</FrameLayout>

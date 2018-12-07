@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+    
+    <!-- 搜索框 -->
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            style="@style/search_style_bg" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             style="@style/search_style_cont">
+
+            <!-- 搜索图标 -->
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_search"
+                android:contentDescription="@null" />
+            
+
+            <!-- 搜索内容框 -->
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_toRightOf="@id/iv_search"
+                android:background="@null"
+                android:hint="如阿司匹林、ASPL"
+                android:singleLine="true"
+                android:textColorHint="@color/bg_search"
+                android:textSize="15sp" />
+
+            <!-- 清除按钮 -->
+
+            <ImageButton
+                android:id="@+id/ib_search_clear"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/editclear_n"
+                android:contentDescription="@null" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView 
+        android:id="@+id/tv_medicine_fuzzy_twomore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="请输入两个及两个以上汉字或者英文字母"
+        android:textColor="@color/bg_search"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+    <ImageView 
+        android:id="@+id/iv_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_circle"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/bg_search"  
+		android:dividerHeight="1dp"
+		android:cacheColorHint="@android:color/transparent"
+		android:visibility="gone"
+		/>
+     <com.bsoft.hospital.pub.suzhoumh.view.list.ListViewExt
+        android:id="@+id/lv_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/line_color"  
+		android:dividerHeight="0.5dp"
+		android:scrollbars="vertical"
+		android:visibility="visible"/>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/rl_item"
+        android:descendantFocusability="blocksDescendants"
+         >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="呼吸内科"
+                android:textColor="@color/black_text"
+                android:textSize="16sp" 
+                android:id="@+id/tv_ks"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="呼吸道感染"
+                android:textColor="#999999"
+                android:textSize="15sp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/tv_content" 
+                />
+			</LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp" >
+
+             <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="2014-7-26"
+                    android:textColor="@color/black_text"
+                    android:textSize="15dp" 
+                    android:id="@+id/tv_time"
+                    /> 
+            </RelativeLayout>
+        </LinearLayout>
+		<Button 
+		    android:layout_width="wrap_content"
+		    android:layout_height="30dp"
+		    android:id="@+id/btn_satisfaction"
+		    android:text="待评价"
+		    android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+		    android:background="@drawable/lightred_corners_n"
+		    android:textSize="15sp"
+		    android:textColor="@color/red"
+		    />
+    </RelativeLayout>
+
+</LinearLayout>

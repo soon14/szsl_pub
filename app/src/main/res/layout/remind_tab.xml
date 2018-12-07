@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fadingEdge="none" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.app.tanklib.view.BsoftActionBar
+            android:id="@+id/actionbar"
+            style="@style/BsoftActionBar" >
+        </com.app.tanklib.view.BsoftActionBar>
+
+        <FrameLayout
+            android:id="@+id/flay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/actionbar" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/flay" >
+        </FrameLayout>
+    </RelativeLayout>
+
+</TabHost>

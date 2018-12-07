@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent" >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentTop="true"
+        android:background="#f6f6f6" >
+
+        <TextView
+            android:id="@+id/search_cancel_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/actionbar_bg"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/search_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="2dip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dip"
+            android:layout_toLeftOf="@+id/search_cancel_btn"
+            android:background="@drawable/search_et_bg"
+            android:gravity="center_vertical"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="28dp"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/search_et"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/icon_poisearch_search" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top" >
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/divider2white"
+            android:dividerHeight="1dp"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent"
+            android:scrollingCache="false" >
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

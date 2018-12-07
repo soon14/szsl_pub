@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_select"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dip"
+        android:background="@color/divider2white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dip"
+        android:paddingTop="15dip" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="20dip"
+            android:layout_toLeftOf="@+id/right"
+            android:text="你有新的提醒"
+            android:textColor="#252626"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_select" >
+
+    <ImageView
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dip"
+        android:src="@drawable/seekhos_leftsearch" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="55dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dip"
+        android:layout_toRightOf="@id/left"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="17sp" android:layout_toLeftOf="@+id/right"/>
+
+    <TextView
+        android:id="@+id/orgname"
+        android:layout_width="wrap_content"
+        android:layout_height="55dip"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dip"
+        android:layout_toLeftOf="@+id/right"
+        android:gravity="center_vertical"
+        android:textColor="@color/gray_text"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dip"
+        android:src="@drawable/arrow_right" />
+
+</RelativeLayout>

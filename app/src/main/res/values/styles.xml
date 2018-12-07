@@ -1,0 +1,531 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+	<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<!-- Customize your theme here. -->
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+	</style>
+
+
+	<!--线-->
+	<style name="style_line">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">0.5dp</item>
+		<item name="android:background">@color/line_color</item>
+	</style>
+
+    <style name="noAnimation">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+
+    <style name="BaseTheme" parent="android:Theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/noAnimation</item>
+    </style>
+
+
+    <style name="settingLayout">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">45dip</item>
+        <item name="android:background">@drawable/dialog_select</item>
+    </style>
+
+    <style name="search_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:windowAnimationStyle">@style/top_anim_style</item>
+    </style>
+
+    <style name="bottom_anim_style">
+        <item name="android:windowEnterAnimation">@anim/in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/out_from_bottom</item>
+    </style>
+
+    <style name="top_anim_style">
+        <item name="android:windowEnterAnimation">@anim/in_from_top</item>
+        <item name="android:windowExitAnimation">@anim/out_from_top</item>
+    </style>
+
+    <style name="transparent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="note_ratingbar_style" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/note_ratingbar_progress</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:minHeight">26dip</item>
+        <item name="android:maxHeight">50dip</item>
+    </style>
+    
+    <style name="search_style_cont">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:background">@drawable/bg_search_cont</item>
+    </style>
+
+    <!-- search bar -->
+    <style name="search_style_bg">
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:background">@color/bg</item>
+    </style>
+    
+    <!-- 药品详情 -->
+    <style name="tv_medic_parent_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+    <style name="tv_medic_chid_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+    <!-- 横分隔线 -->
+    <style name="Divider_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+    
+    <!-- 服药提醒 -->
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    
+    <!-- 家庭管理 -->
+    <style name="family_list_item_linearlayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="family_list_item_image">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+    <style name="family_list_item_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+    <!-- 号源选择对话框 -->
+    <style name="Dialog_Fullscreen">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    
+    <!-- 首页布局 -->
+    <style name="home_layout_vertical_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="home_layout_horizontal_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+		<item name="android:background">@drawable/bg_home_module</item>
+    </style>
+    <style name="home_layout_child_style">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="home_image_style">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+	<style name="home_text_style">
+	    <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_gravity">center_horizontal</item>
+	    <item name="android:layout_marginTop">5dp</item>
+	    <item name="android:textColor">#333333</item>
+	</style>
+	<style name="home_space_vertical_style">
+		<item name="android:layout_height">fill_parent</item>
+		<item name="android:layout_width">0.5dp</item>
+		<item name="android:background">#e6e6e6</item>
+	</style>
+	<style name="home_space_horizontal_style">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">0.5dp</item>
+		<item name="android:background">#e6e6e6</item>
+	</style>
+	<style name="home_other_layout_style">
+		<item name="android:layout_width">0dip</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:padding">10dp</item>
+		<item name="android:background">@drawable/bg_home_module</item>
+		<item name="android:clickable">true</item>
+	</style>
+	<style name="home_other_text_title_style">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/black_text</item>
+	</style>
+	<style name="home_other_text_desc_style">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginTop">5dp</item>
+		<item name="android:textSize">12sp</item>
+		<item name="android:textColor">#999999</item>
+	</style>
+	<style name="home_other_image_style">
+		<item name="android:layout_width">50dp</item>
+		<item name="android:layout_height">50dp</item>
+		<item name="android:layout_alignParentRight">true</item>
+	</style>
+	<!-- 预约挂号 确认界面-->
+	<style name="ll_parent_style">
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">50dp</item>
+	    <item name="android:orientation">horizontal</item>
+	    <item name="android:layout_marginLeft">10dp</item>
+	    <item name="android:gravity">center_vertical</item>
+	</style>
+	<style name="tv_title_style">
+	    <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textSize">17sp</item>
+	    <item name="android:textColor">#999999</item>
+	</style>
+	<style name="tv_content_style">
+	    <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_marginLeft">10dp</item>
+	    <item name="android:textSize">17sp</item>
+	</style>
+	<style name="iv_icon_style">
+	    <item name="android:layout_width">20dp</item>
+	    <item name="android:layout_height">20dp</item>
+	    <item name="android:layout_marginRight">10dp</item>
+	</style>
+	<style name="line_style">
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">0.5dp</item>
+	    <item name="android:background">@color/line_color</item>
+	</style>
+	
+	<!-- 预约记录 -->
+	<style name="ll_appoint_history_item_style">
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:orientation">horizontal</item>
+	    <item name="android:paddingLeft">10dp</item>
+	    <item name="android:paddingRight">10dp</item>
+	    <item name="android:paddingTop">6dp</item>
+	    <item name="android:paddingBottom">6dp</item>
+	</style>
+	
+	<style name="tv_appoint_history_item_title_style">
+	    <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textSize">16sp</item>
+	    <item name="android:textColor">#999999</item>
+	</style>
+	
+	<style name="tv_appoint_history_item_content_style">
+	    <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textSize">17sp</item>
+	    <item name="android:layout_marginLeft">10dp</item>
+	    <item name="android:textColor">#333333</item>
+	</style>
+	
+	<!-- 首页 -->
+	<style name="tab_image">
+	    <item name="android:layout_width">30dp</item>
+	    <item name="android:layout_height">30dp</item>
+	    <item name="android:layout_centerHorizontal">true</item>
+	    <item name="android:layout_marginTop">5dp</item>
+	</style>
+	<style name="tab_text">
+	    <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_centerHorizontal">true</item>    
+	</style>
+	<!-- 用药提醒 -->
+	<style name="ll_remind_style">
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">45dp</item>
+	    <item name="android:orientation">horizontal</item>
+	    <item name="android:layout_marginLeft">10dp</item>
+	    <item name="android:layout_marginRight">10dp</item>
+	    <item name="android:gravity">center_vertical</item>
+	</style>
+	<!-- 用药提醒   设置时间 -->
+	<style name="ll_remind_time_style">
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:gravity">center</item>
+	    <item name="android:orientation">horizontal</item>
+	</style>
+	<style name="tv_remind_style">
+	    <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:drawableRight">@drawable/ic_img_arrow</item>
+	    <item name="android:textColor">#626262</item>
+	    <item name="android:textSize">18sp</item>
+	    <item name="android:padding">10dp</item>
+	</style>
+	<style name="iv_remind_style">
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">1dp</item>
+	    <item name="android:layout_marginLeft">5dp</item>
+	    <item name="android:layout_marginRight">5dp</item>
+	    <item name="android:background">#ffd0d0d0</item>
+	</style>
+	
+	<!-- 检查详情 -->
+	<style name="ll_jcxq_style">
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:orientation">horizontal</item>
+	    <item name="android:paddingBottom">15dp</item>
+	    <item name="android:paddingTop">15dp</item>
+	    <item name="android:gravity">center_vertical</item>
+	</style>
+	<style name="iv_jcxq_style">
+	    <item name="android:layout_width">15dp</item>
+	    <item name="android:layout_height">15dp</item>
+	    <item name="android:layout_marginLeft">10dp</item>
+	    <item name="android:layout_marginRight">10dp</item>
+	</style>
+	<style name="tv_jcxq_title_style">
+	    <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:textColor">#74726D</item>
+	</style>
+	<style name="tv_jcxq_content_style">
+	    <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_marginLeft">18dp</item>
+	    <item name="android:layout_marginRight">15dp</item>
+	    <item name="android:textSize">16sp</item>
+	    <item name="android:textColor">@color/black_text</item>
+	</style>
+	
+	<!-- 预约挂号的选择时间 -->
+	<style name="ll_select_date_sytle">
+	    <item name="android:layout_width">0dp</item>
+	    <item name="android:layout_height">fill_parent</item>
+	    <item name="android:layout_weight">1</item>
+		<item name="android:orientation">vertical</item>
+		<item name="android:gravity">center</item>
+	</style>
+	<style name="tv_select_date_style">
+	    <item name="android:layout_width">0dp</item>
+	    <item name="android:layout_height">fill_parent</item>
+	    <item name="android:textSize">14sp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:gravity">center</item>
+	</style>
+	<style name="vertical_line_select_date_style">
+	    <item name="android:layout_width">0.5dp</item>
+	    <item name="android:layout_height">fill_parent</item>
+	    <item name="android:background">#cccccc</item>
+	</style>
+	<style name="horizontal_line_select_date_style">
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">0.5dp</item>
+	    <item name="android:background">#cccccc</item>
+	</style>
+	<style name="tv_select_date_am_style">
+	    <item name="android:layout_width">0dp</item>
+	    <item name="android:layout_height">fill_parent</item>
+	    <item name="android:layout_weight">1</item>
+	    <item name="android:gravity">center</item>
+	    <item name="android:text">预约</item>
+	    <item name="android:background">@drawable/bigbut_blue</item>
+	    <item name="android:textColor">@color/white</item>
+	    <item name="android:textSize">14sp</item>
+	    <item name="android:visibility">invisible</item>
+	</style>
+	<!-- hos_page -->
+	<style name="hos_page_text_title_style">
+	    <item name="android:layout_width">75dp</item>
+	    <item name="android:layout_height">30dp</item>
+	    <item name="android:textColor">@color/white</item>
+	    <item name="android:paddingLeft">10dp</item>
+	    <item name="android:textSize">15sp</item>
+	    <item name="android:background">@drawable/hospital_text_bg</item>
+	    <item name="android:gravity">center_vertical</item>
+	</style>
+	<style name="hos_page_layout_title_style">
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:background">#f2f2f2</item>
+	    <item name="android:layout_marginLeft">10dp</item>
+	    <item name="android:layout_marginRight">10dp</item>
+	</style>
+	
+	<style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+	    <item name="android:progressDrawable">@drawable/ratingbar_bg</item>
+	    <item name="android:minHeight">28dp</item>
+	    <item name="android:maxHeight">28dp</item>
+	</style>
+	<style name="btn_star_style">
+	    <item name="android:layout_width">20dp</item>
+	    <item name="android:layout_height">20dp</item>
+	    <item name="android:layout_margin">5dp</item>
+	</style>
+	
+	<style name="tv_doctorinfo_style">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:padding">10dp</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+
+	<style name="tv_visit_detail_content_style">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">fill_parent</item>
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/black_text</item>
+	</style>
+
+	<!--住院预缴金-->
+	<style name="receipt_text_gray">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/gray_color</item>
+		<item name="android:layout_margin">10dp</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+	<style name="receipt_text_black">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/black_text</item>
+		<item name="android:layout_margin">10dp</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+
+	<!-- pay -->
+	<style name="pay_layout">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">70dp</item>
+		<item name="android:orientation">horizontal</item>
+		<item name="android:gravity">center_vertical</item>
+	</style>
+	<style name="pay_layout2">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:orientation">vertical</item>
+	</style>
+	<style name="pay_image">
+		<item name="android:layout_width">30dp</item>
+		<item name="android:layout_height">30dp</item>
+		<item name="android:layout_margin">10dp</item>
+	</style>
+	<style name="pay_text">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+	<style name="pay_text2">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:textColor">@color/gray_text</item>
+	</style>
+	<style name="pay_checkbox">
+		<item name="android:layout_width">15dp</item>
+		<item name="android:layout_height">15dp</item>
+		<item name="android:button">@null</item>
+		<item name="android:background">@drawable/checkbox</item>
+		<item name="android:layout_marginRight">20dp</item>
+	</style>
+
+	<style name="payed_text">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:layout_marginLeft">16dp</item>
+	</style>
+
+	<style name="style_registration_tv">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">18sp</item>
+		<item name="android:padding">10sp</item>
+	</style>
+	<style name="dialogTheme" parent="android:Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:background">@android:color/transparent</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:backgroundDimEnabled">true</item>
+	</style>
+
+	<style name="weekName">
+		<item name="android:layout_width">0.0dip</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:layout_weight">1.0</item>
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/gray</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+
+	<style name="text_yysj">
+		<item name="android:layout_width">0dp</item>
+		<item name="android:textSize">12sp</item>
+		<item name="android:gravity">center_horizontal</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">#999</item>
+	</style>
+</resources>

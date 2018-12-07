@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<LinearLayout style="@style/ll_appoint_history_item_style" 
+	    android:visibility="gone"
+	    >
+
+	    <TextView style="@style/tv_appoint_history_item_title_style" 
+	        android:text="普通预约"
+	        android:layout_weight="1"
+	        android:textColor="@color/actionbar_bg"
+	        />
+	    <TextView 
+	       style="@style/tv_appoint_history_item_title_style"
+	        android:text="预约成功"
+	        android:textColor="@color/actionbar_bg"
+	        />
+	</LinearLayout>
+	<RelativeLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    >
+	<LinearLayout style="@style/ll_appoint_history_item_style" 
+	    android:id="@+id/ll_doctor"
+	    >
+	    <TextView
+	        style="@style/tv_appoint_history_item_title_style"
+	        android:text="专家医生" />
+
+	    <TextView style="@style/tv_appoint_history_item_content_style" 
+	        android:text="胡秀晶"
+	        android:id="@+id/tv_doctor"
+	        />
+	</LinearLayout>
+	<LinearLayout style="@style/ll_appoint_history_item_style"
+	    android:id="@+id/ll_1"
+	    android:layout_below="@+id/ll_doctor"
+	     >
+	    <TextView
+	        style="@style/tv_appoint_history_item_title_style"
+	        android:text="预约科室" />
+
+	    <TextView style="@style/tv_appoint_history_item_content_style" 
+	        android:text="呼吸内科"
+	        android:id="@+id/tv_dept"
+	        />
+	</LinearLayout>
+	<LinearLayout style="@style/ll_appoint_history_item_style" 
+	    android:layout_below="@+id/ll_1"
+	    android:id="@+id/ll_3"
+	    >
+	    <TextView
+	        style="@style/tv_appoint_history_item_title_style"
+	        android:text="患者姓名" />
+	    <TextView
+	        style="@style/tv_appoint_history_item_content_style"
+	        android:text="张三" 
+	        android:id="@+id/tv_name"
+	        />
+
+	    <TextView style="@style/tv_content_style" />
+	</LinearLayout>
+	<LinearLayout style="@style/ll_appoint_history_item_style" 
+	    android:id="@+id/ll_4"
+	    android:layout_below="@+id/ll_3"
+	    >
+
+	    <TextView
+	        style="@style/tv_appoint_history_item_title_style"
+	        android:text="预约时间" />
+		<TextView
+	        style="@style/tv_content_style"
+	        android:text="2015-9-14" 
+	        android:id="@+id/tv_yyrq"
+	        />
+		<TextView
+	        style="@style/tv_content_style"
+	        android:text="16:00"
+			android:visibility="gone"
+	        android:id="@+id/tv_sjd"
+	        android:layout_weight="1"
+	        />
+	</LinearLayout>
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="预约成功"
+	    android:textColor="#5ccd4a"
+	    android:layout_alignParentRight="true"
+	    android:id="@+id/tv_state"
+	    android:padding="10dp"
+	    android:textSize="16sp"
+	    />	   
+	</RelativeLayout>
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="42dp"
+	    android:orientation="horizontal"
+	    android:background="@color/bg"
+	    android:gravity="center_vertical"
+	    >
+		<TextView
+		    android:id="@+id/tv_djrq"
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="1"
+		    android:gravity="left|center_vertical"
+		    android:text="2015-09-14 10:18:14" 
+		    android:paddingLeft="10dp"
+		    android:paddingRight="10dp"
+		    android:textColor="#999999"
+		    />
+		<TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="30dp"
+		    android:text="取消预约"
+		    android:id="@+id/tv_del"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"
+		    android:padding="5dp"
+		    android:gravity="center"
+		    android:background="@drawable/bigbut_light_gray"
+		    android:textColor="#999999"
+		    />
+	</LinearLayout>
+</LinearLayout>
+

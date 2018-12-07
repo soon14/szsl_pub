@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_fee_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_fee_num"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_fee_price"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_fee_scale"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_fee_sum"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F0F0F0"/>
+</LinearLayout>

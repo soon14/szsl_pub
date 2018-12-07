@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:orientation="vertical" >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_margin="8dip"
+        android:background="@drawable/family_corners_bg"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_poisearch_search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dip"
+            android:text="输入城市名"
+            android:textColor="#d3d3d3"
+            android:textSize="16sp" 
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!--
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent"
+            android:scrollingCache="false" >
+        </ListView>
+        -->
+
+        <com.app.tanklib.floatinggroup.FloatingGroupExpandableListView
+            android:id="@+id/floatinggroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:childDivider="#FF000000"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="100.0dip"
+            android:layout_height="100.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/city_corners_bg"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+
+        <com.bsoft.hospital.pub.suzhoumh.view.sort.SideBar
+            android:id="@+id/sidrbar"
+            android:layout_width="30.0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar" >
+    </com.app.tanklib.view.BsoftActionBar>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="15dip"
+        android:paddingTop="15dip" >
+		<ImageView 
+		    android:layout_width="15dp"
+		    android:layout_height="15dp"
+		    android:background="@drawable/jcxm"
+		    android:layout_marginLeft="10dp"
+		    />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="检验项目"
+            android:textColor="#74726D"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dip"
+            android:layout_marginRight="15dip"
+            android:gravity="center_vertical"
+            android:textColor="@color/black_text"
+            android:text=""
+            android:textSize="17sp" />
+    </LinearLayout>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#d9d9d9" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dip"
+        android:paddingTop="15dip" 
+        android:gravity="center_vertical"
+        >
+		<ImageView 
+		   android:layout_width="15dp"
+		    android:layout_height="15dp"
+		    android:background="@drawable/time"
+		    android:layout_marginLeft="10dp"
+		    />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="检验时间"
+            android:textColor="#74726D"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dip"
+            android:layout_marginRight="15dip"
+            android:gravity="center_vertical"
+            android:textColor="@color/black_text"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#d9d9d9" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dip"
+        android:paddingTop="15dip" 
+        android:gravity="center_vertical"
+        >
+		<ImageView 
+		   android:layout_width="15dp"
+		    android:layout_height="15dp"
+		    android:background="@drawable/jcys"
+		    android:layout_marginLeft="10dp"
+		    />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="检验医生"
+            android:textColor="#74726D"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_doc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dip"
+            android:layout_marginRight="15dip"
+            android:gravity="center_vertical"
+            android:textColor="@color/black_text"
+            android:textSize="17sp" />
+    </LinearLayout>
+	</LinearLayout>
+
+	<View
+	    android:layout_width="match_parent"
+	    android:layout_height="0.6dip"
+	    android:background="#d9d9d9" />
+	<View
+	    android:layout_width="fill_parent"
+	    android:layout_height="15dp"
+	    android:background="#f2f2f2" />
+	<View
+	    android:layout_width="match_parent"
+	    android:layout_height="0.6dip"
+	    android:background="#d9d9d9" />
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:background="@color/white"
+	    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dip"
+        android:gravity="center_vertical"
+         >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:text="项目"
+            android:textColor="#74726D"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:text="结果"
+            android:textColor="#74726D"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center_vertical|right"
+            android:text="参考值"
+            android:textColor="#74726D"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#d9d9d9" />
+
+	<ListView 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/lv_detail"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	    ></ListView>
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg">
+
+        <TextView
+            android:id="@+id/tv_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:text="温馨提示：苏州医保客户如已在苏州银行柜台签约，请点击红字“（未认证）”进行短信验证，实现社保线上支付功能"
+            android:textColor="@color/gray_text"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_prompt"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:background="@color/divider2bg"/>
+
+            <RelativeLayout
+                android:id="@+id/layout1"
+                style="@style/settingLayout">
+
+                <TextView
+                    android:id="@+id/text1_tip"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dip"
+                    android:text="*真实姓名"
+                    android:textColor="@color/actionbar_bg"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/text1_tip"
+                    android:text="请填写"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/edit1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/text1_tip"
+                    android:background="@null"
+                    android:hint="请填写"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginLeft="20dip"
+                android:background="@color/divider2white"/>
+
+            <RelativeLayout
+                android:id="@+id/layout2"
+                style="@style/settingLayout">
+
+                <TextView
+                    android:id="@+id/text2_tip"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dip"
+                    android:text="*身份证号"
+                    android:textColor="@color/actionbar_bg"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/text2_tip"
+                    android:text="请填写"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/edit2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/text2_tip"
+                    android:background="@null"
+                    android:hint="请填写"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginLeft="20dip"
+                android:background="@color/divider2white"/>
+
+            <RelativeLayout
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@drawable/dialog_select">
+
+                <TextView
+                    android:id="@+id/text3_tip"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dip"
+                    android:text="性别"
+                    android:textColor="@color/actionbar_bg"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/text3_tip"
+                    android:text="请选择"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:id="@+id/right3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:src="@drawable/arrow_right"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_sex"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:layout_marginLeft="20dip"
+                    android:background="@color/divider2bg"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_sex_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:background="@drawable/dialog_select">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dip"
+                        android:text="男"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:id="@+id/sex1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dip"
+                        android:src="@drawable/icon_gou"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.6dip"
+                    android:layout_marginLeft="20dip"
+                    android:background="@color/divider2white"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_sex_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:background="@drawable/dialog_select">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dip"
+                        android:text="女"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:id="@+id/sex2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dip"
+                        android:src="@drawable/icon_gou"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginLeft="20dip"
+                android:background="@color/divider2white"/>
+
+            <RelativeLayout
+                android:id="@+id/layout6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dialog_select"
+                android:minHeight="45dip"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip">
+
+                <TextView
+                    android:id="@+id/text6_tip"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dip"
+                    android:text="*人员性质"
+                    android:textColor="@color/actionbar_bg"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/text6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/text6_tip"
+                    android:text="请选择"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/text6"
+                    android:text="（未认证）"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/right6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:src="@drawable/arrow_right"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout4"
+                style="@style/settingLayout"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text4_tip"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dip"
+                    android:text="就诊卡号"
+                    android:textColor="@color/actionbar_bg"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/text4_tip"
+                    android:text="请填写"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/edit4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/text4_tip"
+                    android:background="@null"
+                    android:hint="请填写"
+                    android:numeric="integer"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/right4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:src="@drawable/arrow_right"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:layout_marginLeft="20dip"
+                android:background="@color/divider2white"/>
+
+            <RelativeLayout
+                android:id="@+id/layout5"
+                style="@style/settingLayout">
+
+                <TextView
+                    android:id="@+id/text5_tip"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dip"
+                    android:text="*手机号码"
+                    android:textColor="@color/actionbar_bg"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/text5_tip"
+                    android:text="请填写"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:id="@+id/right5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:src="@drawable/arrow_right"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:background="@color/divider2bg"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
