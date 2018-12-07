@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.jakewharton.butterknife'
 
 repositories {
     //arr包的引入需要
@@ -10,7 +9,6 @@ repositories {
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "25.0.3"
     defaultConfig {
         /*对重复依赖包的处理*/
         multiDexEnabled true
@@ -62,29 +60,41 @@ android {
     }
     //解决android 6.0(api 23) SDK，不再提供org.apache.http.*
     useLibrary 'org.apache.http.legacy'
+    //让所有的第三方包强制使用指定版本的support包
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '26.1.0'
+                }
+            }
+        }
+    }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:multidex:1.0.1'
-    compile 'com.ipsmap:ipsmap:1.4.1'
-    compile 'com.jakewharton:butterknife:8.8.1'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.ipsmap:ipsmap:1.4.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.alibaba:fastjson:1.1.68.android'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.alibaba:fastjson:1.1.68.android'
     //libs包
-    compile files('libs/alipaySdk-20151112.jar')
-    compile files('libs/BaiduLBS_Android.jar')
-    compile files('libs/dom4j-2.0.0.jar')
-    compile files('libs/locSDK_3.1.jar')
-    compile files('libs/mpchartlib.jar')
-    compile files('libs/nineoldandroids-2.4.0-2.jar')
-    compile files('libs/pinyin4j-2.5.0.jar')
-    compile files('libs/pushservice-4.5.3.48.jar')
-    compile files('libs/socialsecurity_1.0.0.jar')
-    compile files('libs/umeng-analytics-v6.0.1.jar')
-    compile files('libs/universal-image-loader-1.9.4.jar')
-    compile files('libs/zxing.jar')
-    compile project(':tanklibutil')
-    compile project(':checkupdatelib')
+    implementation files('libs/alipaySdk-20151112.jar')
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/dom4j-2.0.0.jar')
+    implementation files('libs/locSDK_3.1.jar')
+    implementation files('libs/mpchartlib.jar')
+    implementation files('libs/nineoldandroids-2.4.0-2.jar')
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    implementation files('libs/pushservice-4.5.3.48.jar')
+    implementation files('libs/socialsecurity_1.0.0.jar')
+    implementation files('libs/umeng-analytics-v6.0.1.jar')
+    implementation files('libs/universal-image-loader-1.9.4.jar')
+    implementation files('libs/zxing.jar')
+    implementation project(':tanklibutil')
+    implementation project(':checkupdatelib')
 }
