@@ -40,7 +40,7 @@ public class HeaderView extends LinearLayout {
 	}
 
 	private void initHeaderView(Context context){
-		LinearLayout.LayoutParams lp = new LayoutParams(
+		LayoutParams lp = new LayoutParams(
 				LayoutParams.MATCH_PARENT, 0);
 		mHeader = LayoutInflater.from(context).inflate(R.layout.view_refresh_header, null);
 		addView(mHeader, lp);

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.service.quicksettings.TileService;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +38,7 @@ import com.bsoft.hospital.pub.suzhoumh.activity.app.physical.PhysicalActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.app.visit.VisitListActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.charge.ParkingChargesActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.clinic.ClinicDetailInfoActivity;
+import com.bsoft.hospital.pub.suzhoumh.activity.cloud.CloudClinicActivity;
 import com.bsoft.hospital.pub.suzhoumh.api.HttpApi;
 import com.bsoft.hospital.pub.suzhoumh.model.LoginUser;
 import com.bsoft.hospital.pub.suzhoumh.model.ResultModel;
@@ -124,6 +126,7 @@ public class HomeFragment extends BaseFragment implements OnClickListener {
         mainView.findViewById(R.id.rl_home_jktj).setOnClickListener(this);
         mainView.findViewById(R.id.rl_home_sbbx).setOnClickListener(this);
         mainView.findViewById(R.id.btn_hospital_select).setOnClickListener(this);
+        mainView.findViewById(R.id.tv_cloud_clinic).setOnClickListener(this);
 
 
     }
@@ -142,9 +145,14 @@ public class HomeFragment extends BaseFragment implements OnClickListener {
     public void onClick(View v) {
         Intent intent;
         switch (v.getId()) {
+            case R.id.tv_cloud_clinic:
+                //云诊室
+                intent = new Intent(baseContext, CloudClinicActivity.class);
+                startActivity(intent);
+                break;
             case R.id.btn_hospital_select:
                 //院区选择按钮 用来切换不同的院区  =========要来选择不同院区的
-                new CampusSelectionPopWindowImpl(getContext(),application, false, new CampusSelection() {
+                new CampusSelectionPopWindowImpl(getContext(), application, false, new CampusSelection() {
                     @Override
                     public void setCampusSelectionDetail(String hospitalName) {
                         actionBar.setTitle(hospitalName);

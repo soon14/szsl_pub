@@ -1,1 +1,1 @@
-include ':app', ':tanklibutil', ':checkupdatelib'
+include ':app', ':tanklibutil', ':checkupdatelib', ':calendar'

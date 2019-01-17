@@ -433,7 +433,7 @@ public class MonitorAddActivity extends BaseActivity {
 	class MyTimePickerDialog extends TimePickerDialog {
 
 		public MyTimePickerDialog(Context context,
-				TimePickerDialog.OnTimeSetListener callBack, int hourOfDay,
+				OnTimeSetListener callBack, int hourOfDay,
 				int minute, boolean is24HourView) {
 			super(context, callBack, hourOfDay, minute, is24HourView);
 		}

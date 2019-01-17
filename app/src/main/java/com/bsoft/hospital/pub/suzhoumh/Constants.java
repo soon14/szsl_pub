@@ -15,6 +15,11 @@ public class Constants {
     public static final String IPSMAP_APP_KEY = "C1IhuBCaZF";
     public static final String IPSMAP_MAP_ID = "Ts3J5kAJuU";
 
+    public static final String CALENDAR = "CALDROID_SAVED_STATE";
+    public static final String CLOUD_TYPE = "cloud_type";
+    public static final String CLOUD_IDEPART = "1";//1-互联网诊室  0-全部
+    public static final int APPOINTMENT_DATE_DELAY_AMOUNT = 35; //日历实行排班的延迟日期范围
+
 
     /**
      * 本部IP , 机构ID
@@ -31,9 +36,11 @@ public class Constants {
     public static final String typeHospitalNameNorth = "苏州市立医院北区";
     public static final String[] LongitudeAndLatitudeNorth = {"120.609669", "31.328131"};
     /**
-     * 东区IP , 机构ID
+     * 东区IP , 机构ID http://172.20.17.31:8090 测试服务器的地址
      */
-    public static final String HttpUrlEasternDistrict = "http://218.4.142.107:8010/";
+//    public static final String HttpUrlEasternDistrict = "http://218.4.142.107:8010/";
+    public static final String HttpUrlEasternDistrict = "http://172.20.17.31:8094/";
+     /*public static final String HttpUrlEasternDistrict = "http://192.168.1.106:8080/";*/
     public static final String HOSPITAL_ID_Eastern = "9858";//机构id
     public static final String typeHospitalNameEastern = "苏州市立医院东区";
     public static final String[] LongitudeAndLatitudeEastern = {"120.633178", "31.324441"};

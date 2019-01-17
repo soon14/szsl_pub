@@ -210,7 +210,7 @@ public class MonitorListActivity extends BaseActivity {
 					}
 					else if(which == 1)//删除
 					{
-						new AlertDialog.Builder(MonitorListActivity.this)
+						new Builder(MonitorListActivity.this)
 	    				.setMessage("确定删除该条记录？")
 						.setTitle("提示")
 						.setPositiveButton("确定",new DialogInterface.OnClickListener() {

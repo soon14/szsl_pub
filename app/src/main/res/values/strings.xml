@@ -44,4 +44,27 @@
     <string name="health_center">体检中心</string>
     <string name="especial_center">特检中心</string>
 
+    <!--云诊室-->
+    <string name="cloud_clinic">互联网诊室</string>
+    <string name="cloud_reservation">云预约</string>
+    <string name="cloud_waiting">云候诊</string>
+    <string name="cloud_pay">云支付</string>
+    <string name="appointment_record">预约记录</string>
+    <string name="query_appointment_record">随时随地查询预约记录</string>
+    <string name="cloud_service">云服务</string>
+    <string name="cloud_report">云报告</string>
+    <string name="cloud_report_check">云报告检验报告</string>
+    <string name="go_query">去查询</string>
+    <string name="cloud_file">云档案</string>
+    <string name="cloud_file_mark">云问诊就诊记录</string>
+    <string name="expert_clinic">专家门诊</string>
+    <string name="ordinary_clinic">专科门诊</string>
+    <string name="feature_clinic">特色门诊</string>
+    <string name="cloud_appointment_registration">互联网挂号</string>
+    <string name="cloud_selection_department">选择科室</string>
+    <string name="introduce">简介</string>
+    <string name="please_input_department_name">请输入科室名称</string>
+    <string name="please_input_doc_name">请输入医生名字</string>
+    <string name="appointment">预约</string>
+
 </resources>

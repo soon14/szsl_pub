@@ -245,6 +245,9 @@
 -keep class com.iflytek.**{*;}
 -keep public class com.sails.engine.patterns.IconPatterns
 
+# hirondelle.date4j
+-keep class hirondelle.date4j.**{*;}
+
 # butterknife
 -keep class butterknife.*
 -keepclasseswithmembernames class * { @butterknife.* <methods>; }
@@ -255,5 +258,15 @@
 -keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
   **[] $VALUES;
   public *;
+}
+
+#BaseRecyclerViewAdapterHelper
+-keep class com.chad.library.adapter.** {
+*;
+}
+-keep public class * extends com.chad.library.adapter.base.BaseQuickAdapter
+-keep public class * extends com.chad.library.adapter.base.BaseViewHolder
+-keepclassmembers  class **$** extends com.chad.library.adapter.base.BaseViewHolder {
+     <init>(...);
 }
 

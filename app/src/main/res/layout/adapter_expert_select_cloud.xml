@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_cloud"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_select"
+        android:padding="@dimen/dp_10">
+
+        <com.app.tanklib.bitmap.view.RoundImageView
+            android:id="@+id/iv_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/doc_male"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toRightOf="@+id/iv_head"
+            android:text="高春正"
+            android:textColor="@color/black_text"
+            android:textSize="@dimen/sp_16"/>
+
+        <TextView
+            android:id="@+id/tv_profession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_name"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_name"
+            android:text=""
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/sp_14"/>
+
+        <TextView
+            android:id="@+id/tv_zjfy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_head"
+            android:text=""
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/sp_14"/>
+
+        <Button
+            android:id="@+id/btn_see_doctinfo"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bigbut_blue"
+            android:text="@string/introduce"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"/>
+
+        <Button
+            android:id="@+id/btn_appoint"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/btn_see_doctinfo"
+            android:background="@drawable/bigbut_blue"
+            android:text="@string/appointment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"/>
+    </RelativeLayout>
+</LinearLayout>

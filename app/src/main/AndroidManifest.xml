@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.bsoft.hospital.pub.suzhoumh">
+          package="com.bsoft.hospital.pub.suzhoumh"
+          tools:ignore="ProtectedPermissions">
 
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
     <uses-permission android:name="android.permission.CALL_PHONE"/>
@@ -26,6 +27,7 @@
     <!-- 允许应用读取低级别的系统日志文件 -->
     <uses-permission android:name="android.permission.READ_LOGS">
     </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
     <!-- baidu end -->
 
     <!-- 访问Intenet权限 -->
@@ -90,8 +92,7 @@
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote">
-        </service>
+            android:process=":remote"/>
 
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.LoadingActivity"
@@ -107,9 +108,7 @@
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.MainTabActivity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activity.appoint.SelectDoctorOrDateActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -120,16 +119,12 @@
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.BootPageActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".activity.app.insurance.InsuranceActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            />
-
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activity.app.report.reportimg.ImagesGraphicActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -138,16 +133,12 @@
         <activity
             android:name=".activity.appoint.AppointExpertInfoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activity.appoint.SelectAppointDateOrProfileActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".activity.appoint.SelectProfileOrAppointActivity"
@@ -162,8 +153,7 @@
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.WebActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <!-- Satisfaction -->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.satisfaction.SatisfactionInfoActivity"
@@ -181,8 +171,7 @@
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.account.LoginActivity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            />
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.account.RegisterActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -194,8 +183,7 @@
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.account.MipcaActivityCapture"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <!-- app -->
         <!-- APP pub appoint -->
         <activity
@@ -334,70 +322,57 @@
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.healthtool.MedicineRemindActivity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.healthtool.MedicineRemindAddActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <!-- consult 咨询 -->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.consult.SelectDeptActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.consult.SelectDoctorActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.consult.ConsultAddActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden">
-        </activity>
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.consult.ConsultDetailActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden">
-        </activity>
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.consult.ImageDetailActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <!-- 健康资讯 -->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.news.NewsListActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.news.NewsDetailActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.news.HospitalNewsActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
 
         <!-- more -->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.more.MoreActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
 
         <receiver
-            android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.healthtool.CallAlarmReceiver"
-            >
-            <intent-filter
-                >
+            android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.healthtool.CallAlarmReceiver">
+            <intent-filter>
                 <action android:name="com.bsoft.hospital.pub.zssz.medicineremind"/>
             </intent-filter>
         </receiver>
@@ -406,334 +381,260 @@
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.schedule.DoctorScheduleActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.hosptial.HosptialPageActivity"
             android:configChanges="orientation|keyboardHidden"
             android:hardwareAccelerated="false"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.hosptial.DeptInfoActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <!-- Map -->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.map.HospitalMapActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.map.RouteActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.map.RouteDetailActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <!-- Dynamic -->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.dynamic.DynamicDetailActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.dynamic.DynamicCommentActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.dynamic.NoticeActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.dynamic.NoticeDetailActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <!-- Message -->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.message.MessageDetailActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
 
         <!-- My -->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.SettingActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.SettingAboutActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.SettingHeaderActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.FeedbackActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.SettingMsgActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.SettingAccountActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.SettingPwdActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.insurance.InsuranceInfoActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.note.MyNoteActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.note.ChargeDetailActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.note.RegisterDetailActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <!-- My Info -->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.info.MyInfoActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.info.MyInfoSexActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.info.MyInfoNatureActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.info.MyInfoSettingActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.info.MyCardActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.info.MyCardAddActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.info.MyContactsActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.info.MyContactsAddActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.info.MyMobileBindActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.info.MyInfoAddarssActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.info.MyInfoAddressChooseActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.info.MyInfoAddressStreetActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
 
         <!-- record -->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.record.MyRecordLookActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.record.MyRecordTextActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.record.MyRecordDeptActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.record.MyRecordInfoActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.record.PicInfoActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
 
         <!-- family -->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.family.MyFamilyActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.family.MyFamilyAddActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.family.MyFamilyEditActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.family.MyFamilyRelationActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.my.family.MyFamilyActivateActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <!--就诊记录-->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.visit.VisitListActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.visit.VisitDetailActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"/>
         <!--住院预缴金-->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.pay.MyAccountRechargeActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.pay.MyInHospitalActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.pay.ReceiptDetailActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.pay.SZBankActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
 
         <!-- 诊间支付 -->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.fee.FeeDetailActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.fee.FeeListActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.fee.FeePreListActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.fee.FeePayedActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.fee.FeePayedActivity2"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.fee.FeePayActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.fee.OneDayListActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
 
         <!-- 签到取号 -->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.sign.SignListActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.sign.FeePayActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.sign.RegistrationInfoActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            >
-        </activity>
+            android:screenOrientation="portrait"/>
         <!--健康体检-->
         <activity
             android:name="com.bsoft.hospital.pub.suzhoumh.activity.app.physical.PhysicalActivity"
@@ -753,6 +654,40 @@
             android:screenOrientation="portrait"/>
         <activity
             android:name=".activity.charge.ParkingChargesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.cloud.CloudClinicActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.cloud.CloudAppointmentRegistrationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.cloud.CloudSelectionDepartmentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <activity
+            android:name=".activity.cloud.CloudDepartmentDateActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.cloud.CloudSelectExpertOrDateActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <activity
+            android:name=".activity.cloud.CloudSelectExpertActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <activity
+            android:name=".activity.cloud.CloudIntroduceOrScheduleActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"/>
 

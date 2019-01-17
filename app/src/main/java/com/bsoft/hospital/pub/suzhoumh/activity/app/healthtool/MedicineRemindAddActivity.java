@@ -503,7 +503,7 @@ public class MedicineRemindAddActivity extends BaseActivity implements OnClickLi
 					}
 				});
 		builder1.setNegativeButton("取消",
-				new android.content.DialogInterface.OnClickListener() {
+				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog,
 							int which) {
 						dialog.dismiss();

@@ -25,7 +25,7 @@ public class DateUtil {
 	public static DateFormat format2 = new SimpleDateFormat("yyyy年MM月");
 	public static DateFormat format3 = new SimpleDateFormat("yyyy-MM-dd");
 	public static DateFormat format4 = new SimpleDateFormat("MM-dd");
-	public static java.util.Calendar cal = java.util.Calendar.getInstance();
+	public static Calendar cal = Calendar.getInstance();
 
 	public static String getDateTime(long d) {
 		String result = "";
@@ -51,7 +51,7 @@ public class DateUtil {
 //	}
 
 	public static int getAge(long bityhday) {
-		Date d1 = new Date(bityhday + cal.get(java.util.Calendar.ZONE_OFFSET));
+		Date d1 = new Date(bityhday + cal.get(Calendar.ZONE_OFFSET));
 		Date d2 = new Date();
 		return d2.getYear() - d1.getYear();
 	}
@@ -106,13 +106,13 @@ public class DateUtil {
 	// 返回当前的UTC时间
 	public static long getNowTime() {
 		return System.currentTimeMillis()
-				- cal.get(java.util.Calendar.ZONE_OFFSET);
+				- cal.get(Calendar.ZONE_OFFSET);
 	}
 
 	public static long getUtcTimeByStr(String str) {
 		try {
 			return format3.parse(str).getTime()
-					- cal.get(java.util.Calendar.ZONE_OFFSET);
+					- cal.get(Calendar.ZONE_OFFSET);
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
@@ -121,7 +121,7 @@ public class DateUtil {
 
 	public static String getBirthDateTime(long d) {
 		return format3.format(new Date(d
-				+ cal.get(java.util.Calendar.ZONE_OFFSET)));
+				+ cal.get(Calendar.ZONE_OFFSET)));
 	}
 
 	public static String getDateTime(DateFormat format, long d) {
@@ -172,7 +172,7 @@ public class DateUtil {
 			} else {
 				if (date.getYear() == new Date().getYear()) {
 					return format4.format(new Date(date.getTime()
-							+ cal.get(java.util.Calendar.ZONE_OFFSET)));
+							+ cal.get(Calendar.ZONE_OFFSET)));
 				} else {
 					return getBirthDateTime(date.getTime());
 				}
@@ -196,7 +196,7 @@ public class DateUtil {
 	public static long getDayTime(String d) {
 		try {
 			return format1.parse(d).getTime()
-					- cal.get(java.util.Calendar.ZONE_OFFSET);
+					- cal.get(Calendar.ZONE_OFFSET);
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
@@ -206,7 +206,7 @@ public class DateUtil {
 	public static long getMonthTime(String d) {
 		try {
 			return format2.parse(d).getTime()
-					- cal.get(java.util.Calendar.ZONE_OFFSET);
+					- cal.get(Calendar.ZONE_OFFSET);
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}

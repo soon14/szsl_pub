@@ -41,7 +41,7 @@ public class FooterView extends LinearLayout {
 	}
 	
 	private void initFooterView(Context context){
-		LinearLayout.LayoutParams lp = new LayoutParams(
+		LayoutParams lp = new LayoutParams(
 				LayoutParams.MATCH_PARENT, 0);
 		mFooter = LayoutInflater.from(context).inflate(R.layout.view_loader_footer, null);
 		addView(mFooter, lp);

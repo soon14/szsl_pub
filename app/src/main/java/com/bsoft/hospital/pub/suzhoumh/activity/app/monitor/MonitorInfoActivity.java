@@ -555,7 +555,7 @@ public class MonitorInfoActivity extends BaseActivity implements OnClickListener
 					}
 					else if(which == 1)//删除
 					{
-						new AlertDialog.Builder(MonitorInfoActivity.this)
+						new Builder(MonitorInfoActivity.this)
 	    				.setMessage("确定删除该条记录？")
 						.setTitle("提示")
 						.setPositiveButton("确定",new DialogInterface.OnClickListener() {

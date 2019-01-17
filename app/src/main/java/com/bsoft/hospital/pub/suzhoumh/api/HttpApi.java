@@ -269,9 +269,9 @@ public class HttpApi {
     public boolean status(JSONObject ob) {
         /*
          * if (null != ob && !ob.isNull("status")) { try { return
-		 * ob.getInt("status") == 1; } catch (JSONException e) {
-		 * e.printStackTrace(); } }
-		 */
+         * ob.getInt("status") == 1; } catch (JSONException e) {
+         * e.printStackTrace(); } }
+         */
         boolean result = false;
         if (null != ob) {
             if (ob.optInt("code") == -200 || ob.optInt("code") == -500) {
@@ -701,6 +701,7 @@ public class HttpApi {
 
 //            String url = Constants.HttpUrl + method;
             String url = Constants.getHttpUrl() + method;
+
 
             ArrayList<BsoftNameValuePair> pa = new ArrayList<BsoftNameValuePair>();
             if (nameValuePairs != null && nameValuePairs.length > 0) {

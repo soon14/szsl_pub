@@ -392,7 +392,7 @@ public class MedicineRemindActivity extends BaseActivity implements OnClickListe
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					new AlertDialog.Builder(MedicineRemindActivity.this)
+					new Builder(MedicineRemindActivity.this)
     				.setMessage("确定删除该用药提醒？")
 					.setTitle("提示")
 					.setPositiveButton("确定",new DialogInterface.OnClickListener() {
@@ -461,7 +461,7 @@ public class MedicineRemindActivity extends BaseActivity implements OnClickListe
 							startActivityForResult(intent, 1);
 						} else if (which == 1)// 删除
 						{
-							new AlertDialog.Builder(MedicineRemindActivity.this)
+							new Builder(MedicineRemindActivity.this)
 		    				.setMessage("确定删除该用药提醒？")
 							.setTitle("提示")
 							.setPositiveButton("确定",new DialogInterface.OnClickListener() {

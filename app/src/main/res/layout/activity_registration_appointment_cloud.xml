@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_cloud"
+              android:orientation="vertical">
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar">
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <View
+        style="@style/line_outer"
+        android:layout_marginTop="@dimen/dp_15"/>
+
+    <LinearLayout
+        android:id="@+id/ll_ordinary_clinic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_select"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_10">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/icon_pt"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1"
+            android:text="@string/ordinary_clinic"
+            android:textSize="@dimen/sp_16"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:padding="@dimen/dp_8"
+            android:src="@drawable/arrow_right"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_outer"/>
+
+    <LinearLayout
+        android:id="@+id/ll_expert_clinic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_select"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_10">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/icon_zj"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1"
+            android:text="@string/expert_clinic"
+            android:textSize="@dimen/sp_16"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_8"
+            android:src="@drawable/arrow_right"
+            android:contentDescription="@null"/>
+    </LinearLayout>
+
+
+    <View
+        style="@style/line_outer"/>
+
+    <LinearLayout
+        android:id="@+id/ll_feature_clinic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_select"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_10">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/icon_zk"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_weight="1"
+            android:text="@string/feature_clinic"
+            android:textSize="@dimen/sp_16"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_8"
+            android:src="@drawable/arrow_right"
+            android:contentDescription="@null"/>
+    </LinearLayout>
+
+    <View
+        style="@style/line_outer"/>
+
+</LinearLayout>

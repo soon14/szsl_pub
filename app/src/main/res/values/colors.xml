@@ -112,4 +112,10 @@
     <color name="green_date">#C3EF7C</color>
 
     <color name="gray_common">#999</color>
+
+    <!--云诊室-->
+    <color name="bg_cloud">#EFEFEF</color>
+    <color name="line_color_outer">#dbdbdb</color>
+    <color name="line_color_inner">#e6e6e6</color>
+    <color name="text_gray">#4d4d4d</color>
 </resources>

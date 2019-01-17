@@ -176,7 +176,7 @@ public class AppointSelectDoctorActivity extends BaseActivity{
 			}
 		});
 
-		ib_search_clear.setOnClickListener(new View.OnClickListener() {
+		ib_search_clear.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 

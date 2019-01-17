@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_parent"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_cloud"
+              android:orientation="vertical">
+
+    <com.app.tanklib.view.BsoftActionBar
+        android:id="@+id/actionbar"
+        style="@style/BsoftActionBar">
+    </com.app.tanklib.view.BsoftActionBar>
+
+    <!-- 搜索框 -->
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="@dimen/dp_8"
+        android:background="@drawable/bg_search_cont"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <!-- 搜索图标 -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_search"
+            android:contentDescription="@null"/>
+
+        <!-- 搜索内容框 -->
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/please_input_department_name"
+            android:singleLine="true"
+            android:textColorHint="@color/bg_search"
+            android:textSize="15sp"/>
+
+        <!-- 清除按钮 -->
+        <ImageButton
+            android:id="@+id/ib_search_clear"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/editclear_n"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
