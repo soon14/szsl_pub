@@ -66,5 +66,11 @@
     <string name="please_input_department_name">请输入科室名称</string>
     <string name="please_input_doc_name">请输入医生名字</string>
     <string name="appointment">预约</string>
+    <string name="time_period">时段</string>
+    <string name="total_amount">总号</string>
+    <string name="remind_amount">余号</string>
+    <string name="state">状态</string>
+    <string name="appoint">挂号</string>
+    <string name="appointment_time">挂号时间：</string>
 
 </resources>

@@ -123,6 +123,7 @@
                         style="@style/line_inner"/>
 
                     <LinearLayout
+                        android:id="@+id/ll_cloud_appointment_record"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"

@@ -20,12 +20,17 @@ import com.bsoft.hospital.pub.suzhoumh.R;
 import com.bsoft.hospital.pub.suzhoumh.activity.adapter.cloud.CloudSelectDepartmentAdapter;
 import com.bsoft.hospital.pub.suzhoumh.activity.adapter.cloud.listener.CloudSelectDepartmentListener;
 import com.bsoft.hospital.pub.suzhoumh.activity.base.BaseActivity;
+import com.bsoft.hospital.pub.suzhoumh.activity.cloud.event.AppointConfirmEvent;
 import com.bsoft.hospital.pub.suzhoumh.api.HttpApi;
 import com.bsoft.hospital.pub.suzhoumh.model.ResultModel;
 import com.bsoft.hospital.pub.suzhoumh.model.Statue;
 import com.bsoft.hospital.pub.suzhoumh.model.cloud.SelectDeptModel;
 import com.bsoft.hospital.pub.suzhoumh.util.KeyboardUtils;
 import com.bsoft.hospital.pub.suzhoumh.util.ToastUtils;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,9 +75,22 @@ public class CloudSelectionDepartmentActivity extends BaseActivity implements Cl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_department_selection_cloud);
         mUnbinder = ButterKnife.bind(this);
+        EventBus.getDefault().register(this);
         findView();
         initRev();
         new GetCloudSelectDeptDataTask().execute();
+    }
+
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onAppointConfirmEvent(AppointConfirmEvent event) {
+        finish();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
     }
 
     /**

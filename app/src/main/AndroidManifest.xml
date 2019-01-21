@@ -690,6 +690,14 @@
             android:name=".activity.cloud.CloudIntroduceOrScheduleActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.cloud.CloudAppointmentConfirmActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.cloud.CloudAppointmentRecordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
 
         <!-- baidu -->
         <!-- push应用定义消息receiver声明 -->

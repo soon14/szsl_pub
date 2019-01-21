@@ -17,6 +17,10 @@ public class CloudGetWorkDateModel extends AbsBaseVoSerializ {
     public String dqrq; //当前日期
     public String zblb; //作班类别
     public String ygdm; //员工代码
+    public String hyzs; //号源总数
+    public String ihyzs; //互联网号源总数
+    public String yyys; //已预约数
+    public String iyyys; //互联网已预约数
 
     @Override
     public void buideJson(JSONObject job) throws JSONException {

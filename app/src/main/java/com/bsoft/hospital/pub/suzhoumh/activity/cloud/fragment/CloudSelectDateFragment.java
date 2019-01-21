@@ -1,6 +1,8 @@
 package com.bsoft.hospital.pub.suzhoumh.activity.cloud.fragment;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
@@ -21,6 +23,7 @@ import com.bsoft.hospital.pub.suzhoumh.activity.cloud.CloudSelectExpertActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.cloud.CloudSelectionDepartmentActivity;
 import com.bsoft.hospital.pub.suzhoumh.api.HttpApi;
 import com.bsoft.hospital.pub.suzhoumh.fragment.index.BaseFragment;
+import com.bsoft.hospital.pub.suzhoumh.model.NullModel;
 import com.bsoft.hospital.pub.suzhoumh.model.ResultModel;
 import com.bsoft.hospital.pub.suzhoumh.model.Statue;
 import com.bsoft.hospital.pub.suzhoumh.model.cloud.CloudGetWorkDateModel;
@@ -64,6 +67,7 @@ public class CloudSelectDateFragment extends BaseFragment {
     private CaldroidFragment caldroidFragment;
     private SimpleDateFormat sdf;
     private List<String> clickDateList;
+    private Context mContext;
 
     public static CloudSelectDateFragment getInstance(SelectDeptModel selectDept, String cloudType, CloudSelectExpertModel expert) {
         CloudSelectDateFragment fragment = new CloudSelectDateFragment();
@@ -73,6 +77,13 @@ public class CloudSelectDateFragment extends BaseFragment {
         bundle.putSerializable("expert", expert);
         fragment.setArguments(bundle);
         return fragment;
+    }
+
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        this.mContext = context;
     }
 
     @Nullable
@@ -119,20 +130,12 @@ public class CloudSelectDateFragment extends BaseFragment {
                 //对符合条件的预约日期进行可预约功能，不符合条件的不不可进行预约功能
                 String mDate = sdf.format(date);
                 if (clickDateList.contains(mDate)) {
-                    switch (cloudType) {
-                        case CloudSelectionDepartmentActivity.ORDINARY_CLINIC_TYPE:
-                            //专科
-                            break;
-                        case CloudSelectionDepartmentActivity.EXPERT_CLINIC_TYPE:
-                            //专家
-                            Intent intent = new Intent(getActivity(), CloudSelectExpertActivity.class);
-                            intent.putExtra("date", mDate);
-                            intent.putExtra("selectDept", selectDept);
-                            intent.putExtra(Constants.CLOUD_TYPE, cloudType);
-                            intent.putExtra("expert", expert);
-                            startActivity(intent);
-                            break;
-                    }
+                    Intent intent = new Intent(mContext, CloudSelectExpertActivity.class);
+                    intent.putExtra("date", mDate);
+                    intent.putExtra("selectDept", selectDept);
+                    intent.putExtra(Constants.CLOUD_TYPE, cloudType);
+                    intent.putExtra("expert", expert);
+                    mContext.startActivity(intent);
                 }
             }
         });

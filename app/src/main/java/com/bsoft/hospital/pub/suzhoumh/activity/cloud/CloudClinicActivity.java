@@ -35,6 +35,25 @@ public class CloudClinicActivity extends BaseActivity {
     }
 
 
+    @OnClick({R.id.ll_cloud_reservation, R.id.ll_cloud_appointment_record})
+    public void doClick(View v) {
+        Intent intent;
+        Class<?> clazz = null;
+        switch (v.getId()) {
+            case R.id.ll_cloud_reservation:
+                //云预约
+                clazz = CloudAppointmentRegistrationActivity.class;
+                break;
+            case R.id.ll_cloud_appointment_record:
+                //预约记录
+                clazz = CloudAppointmentRecordActivity.class;
+                break;
+
+        }
+        intent = new Intent(baseContext, clazz);
+        startActivity(intent);
+    }
+
     @Override
     public void findView() {
         findActionBar();
@@ -52,18 +71,5 @@ public class CloudClinicActivity extends BaseActivity {
             }
 
         });
-    }
-
-    @OnClick({R.id.ll_cloud_reservation})
-    public void doClick(View v) {
-        Intent intent = null;
-        switch (v.getId()) {
-            case R.id.ll_cloud_reservation:
-                //云预约
-                intent = new Intent(baseContext, CloudAppointmentRegistrationActivity.class);
-                break;
-        }
-        startActivity(intent);
-
     }
 }

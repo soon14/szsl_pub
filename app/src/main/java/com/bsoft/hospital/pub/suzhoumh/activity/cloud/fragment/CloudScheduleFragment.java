@@ -1,17 +1,27 @@
 package com.bsoft.hospital.pub.suzhoumh.activity.cloud.fragment;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.app.tanklib.http.BsoftNameValuePair;
 import com.app.tanklib.view.BsoftActionBar;
 import com.bsoft.hospital.pub.suzhoumh.Constants;
 import com.bsoft.hospital.pub.suzhoumh.R;
+import com.bsoft.hospital.pub.suzhoumh.activity.adapter.cloud.CloudScheduleAdapter;
+import com.bsoft.hospital.pub.suzhoumh.activity.adapter.cloud.listener.CloudScheduleListener;
+import com.bsoft.hospital.pub.suzhoumh.activity.cloud.CloudAppointmentConfirmActivity;
+import com.bsoft.hospital.pub.suzhoumh.activity.cloud.CloudAppointmentRegistrationActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.cloud.CloudSelectionDepartmentActivity;
 import com.bsoft.hospital.pub.suzhoumh.api.HttpApi;
 import com.bsoft.hospital.pub.suzhoumh.fragment.index.BaseFragment;
@@ -24,6 +34,8 @@ import com.bsoft.hospital.pub.suzhoumh.util.ToastUtils;
 
 import java.util.List;
 
+import butterknife.BindString;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -32,13 +44,21 @@ import butterknife.ButterKnife;
  * E-mail:lizc@bsoft.com.cn
  * @类说明 云诊室（专家/专科/特色）排班表
  */
-public class CloudScheduleFragment extends BaseFragment {
+public class CloudScheduleFragment extends BaseFragment implements CloudScheduleListener {
 
+    @BindView(R.id.tv_yysj)
+    TextView tvYysj;
+    @BindString(R.string.appointment_time)
+    String appointmentTime;
+    @BindView(R.id.recycler_view)
+    RecyclerView mRecyclerView;
     private CloudSelectExpertModel expert;
     private SelectDeptModel selectDept;
     private String cloudType;
     private String date;
     private BsoftActionBar actionBar;
+    private CloudScheduleAdapter adapter;
+    private Context mContext;
 
     public static CloudScheduleFragment getInstance(CloudSelectExpertModel expert,
                                                     SelectDeptModel selectDept,
@@ -54,6 +74,12 @@ public class CloudScheduleFragment extends BaseFragment {
         return fragment;
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        this.mContext = context;
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -67,6 +93,7 @@ public class CloudScheduleFragment extends BaseFragment {
         initData();
     }
 
+    @SuppressLint("SetTextI18n")
     private void initData() {
         actionBar = getActivity().findViewById(R.id.actionbar);
 
@@ -74,8 +101,30 @@ public class CloudScheduleFragment extends BaseFragment {
         selectDept = (SelectDeptModel) getArguments().getSerializable("selectDept");
         cloudType = getArguments().getString(Constants.CLOUD_TYPE);
         date = getArguments().getString("date");
+        tvYysj.setText(appointmentTime + date);
+
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
+        adapter = new CloudScheduleAdapter(this);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mRecyclerView.setAdapter(adapter);
 
         new GetCloudScheduleDataTask().execute();
+    }
+
+    /**
+     * 排班表中预约操作
+     *
+     * @param schedule
+     */
+    @Override
+    public void onCloudScheduleAppointListener(CloudScheduleModel schedule) {
+        Intent intent = new Intent(mContext, CloudAppointmentConfirmActivity.class);
+        intent.putExtra("expert", expert);
+        intent.putExtra("selectDept", selectDept);
+        intent.putExtra("date", date);
+        intent.putExtra("schedule", schedule);
+        intent.putExtra(Constants.CLOUD_TYPE, cloudType);
+        mContext.startActivity(intent);
     }
 
     /**
@@ -109,6 +158,7 @@ public class CloudScheduleFragment extends BaseFragment {
             if (null != result) {
                 if (result.statue == Statue.SUCCESS) {
                     if (null != result.list && result.list.size() > 0) {
+                        adapter.setNewData(result.list);
                     } else {
                         ToastUtils.showToastShort("数据为空");
                     }

@@ -8,6 +8,11 @@ import com.app.tanklib.view.BsoftActionBar;
 import com.bsoft.hospital.pub.suzhoumh.Constants;
 import com.bsoft.hospital.pub.suzhoumh.R;
 import com.bsoft.hospital.pub.suzhoumh.activity.base.BaseActivity;
+import com.bsoft.hospital.pub.suzhoumh.activity.cloud.event.AppointConfirmEvent;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.BindString;
 import butterknife.ButterKnife;
@@ -30,6 +35,7 @@ public class CloudAppointmentRegistrationActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration_appointment_cloud);
         mUnbinder = ButterKnife.bind(this);
+        EventBus.getDefault().register(this);
         findView();
     }
 
@@ -61,6 +67,17 @@ public class CloudAppointmentRegistrationActivity extends BaseActivity {
         intent = new Intent(baseContext, CloudSelectionDepartmentActivity.class);
         intent.putExtra(Constants.CLOUD_TYPE, cloudType);
         startActivity(intent);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onAppointConfirmEvent(AppointConfirmEvent event) {
+        finish();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
     }
 
     @Override

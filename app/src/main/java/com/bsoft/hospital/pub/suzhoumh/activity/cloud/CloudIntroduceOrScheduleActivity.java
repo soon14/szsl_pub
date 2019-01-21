@@ -12,11 +12,16 @@ import com.bsoft.hospital.pub.suzhoumh.Constants;
 import com.bsoft.hospital.pub.suzhoumh.R;
 import com.bsoft.hospital.pub.suzhoumh.activity.adapter.cloud.CloudExpertOrDateVPAdapter;
 import com.bsoft.hospital.pub.suzhoumh.activity.base.BaseActivity;
+import com.bsoft.hospital.pub.suzhoumh.activity.cloud.event.AppointConfirmEvent;
 import com.bsoft.hospital.pub.suzhoumh.activity.cloud.fragment.CloudIntroduceFragment;
 import com.bsoft.hospital.pub.suzhoumh.activity.cloud.fragment.CloudScheduleFragment;
 import com.bsoft.hospital.pub.suzhoumh.activity.cloud.fragment.CloudSelectDateFragment;
 import com.bsoft.hospital.pub.suzhoumh.model.cloud.CloudSelectExpertModel;
 import com.bsoft.hospital.pub.suzhoumh.model.cloud.SelectDeptModel;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +55,7 @@ public class CloudIntroduceOrScheduleActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule_introdece_cloud);
         mUnbinder = ButterKnife.bind(this);
+        EventBus.getDefault().register(this);
         initData();
         findView();
         setAdapter();
@@ -77,6 +83,17 @@ public class CloudIntroduceOrScheduleActivity extends BaseActivity {
         else
             frags.add(CloudScheduleFragment.getInstance(expert, selectDept, cloudType, date));
 
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onAppointConfirmEvent(AppointConfirmEvent event) {
+        finish();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
     }
 
     @Override

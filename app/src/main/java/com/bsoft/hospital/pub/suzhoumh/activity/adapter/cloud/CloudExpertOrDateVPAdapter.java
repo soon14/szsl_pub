@@ -10,7 +10,7 @@ import java.util.List;
  * @author :lizhengcao
  * @date :2019/1/11
  * E-mail:lizc@bsoft.com.cn
- * @类说明 选专家OR选日期的viewpager/选择简介OR排班表
+ * @类说明 选专家OR选日期的viewpager/选择简介OR排班表/当前预约OR历史预约
  */
 public class CloudExpertOrDateVPAdapter extends FragmentPagerAdapter {
 
