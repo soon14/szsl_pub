@@ -15,13 +15,19 @@ android {
         applicationId "com.bsoft.hospital.pub.suzhoumh"
         minSdkVersion 14
         targetSdkVersion 22
-        versionCode 17
-        versionName "1.17"
+        versionCode 18
+        versionName "1.18"
         ndk {
             // 设置支持的 SO 库构架
             abiFilters 'armeabi'
 
         }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "a49c5ab551c81b6da67e7a47", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
     }
 
     lintOptions {
@@ -83,6 +89,8 @@ dependencies {
     implementation 'com.alibaba:fastjson:1.1.68.android'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
     implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'cn.jiguang.sdk:jpush:3.1.1'
+    implementation 'cn.jiguang.sdk:jcore:1.1.9'
     //libs包
     implementation files('libs/alipaySdk-20151112.jar')
     implementation files('libs/BaiduLBS_Android.jar')

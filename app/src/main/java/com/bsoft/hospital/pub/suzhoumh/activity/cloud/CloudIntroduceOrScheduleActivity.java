@@ -77,7 +77,7 @@ public class CloudIntroduceOrScheduleActivity extends BaseActivity {
         date = getIntent().getStringExtra("date");
 
         frags = new ArrayList<>();
-        frags.add(CloudIntroduceFragment.getInstance());
+        frags.add(CloudIntroduceFragment.getInstance(expert,selectDept));
         if ("".equals(date))
             frags.add(CloudSelectDateFragment.getInstance(selectDept, cloudType,expert));
         else

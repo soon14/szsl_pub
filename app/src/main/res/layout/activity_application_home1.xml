@@ -56,9 +56,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:background="#d2e6ff"
-                android:paddingBottom="6dp"
                 android:paddingLeft="10dp"
-                android:paddingTop="6dp">
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -79,11 +79,11 @@
                     android:id="@+id/btn_hospital_select"
                     android:layout_width="60dp"
                     android:layout_height="25dp"
-                    android:text="院区切换"
-                    android:textSize="10dp"
                     android:layout_marginRight="8dp"
+                    android:background="@drawable/hospital_select_bg"
+                    android:text="院区切换"
                     android:textColor="@color/white"
-                    android:background="@drawable/hospital_select_bg"/>
+                    android:textSize="10dp"/>
             </LinearLayout>
 
 
@@ -260,7 +260,8 @@
                     android:layout_height="50dp"
                     android:background="@color/actionbar_bg"
                     android:gravity="center"
-                    android:text="云诊室"/>
+                    android:text="云诊室"
+                    android:visibility="visible"/>
 
                 <LinearLayout
                     android:layout_width="fill_parent"

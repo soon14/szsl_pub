@@ -2,10 +2,83 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/white"
               android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="简介"/>
+        android:padding="20dp">
+
+        <com.app.tanklib.bitmap.view.RoundImageView
+            android:id="@+id/riv_doctor_info_head"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/doc_header"/>
+
+        <TextView
+            android:id="@+id/tv_appoint_doctor_name"
+            style="@style/tv_doctorinfo_style"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/riv_doctor_info_head"
+            android:layout_toRightOf="@id/riv_doctor_info_head"
+            android:padding="0dp"/>
+
+        <TextView
+            android:id="@+id/tv_doctor_info_profession"
+            style="@style/tv_doctorinfo_style"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/tv_appoint_doctor_name"
+            android:layout_toRightOf="@id/tv_appoint_doctor_name"
+            android:padding="0dp"
+            android:textColor="#535353"/>
+
+        <TextView
+            android:id="@+id/tv_doctor_info_dept"
+            style="@style/tv_doctorinfo_style"
+            android:layout_alignStart="@id/tv_appoint_doctor_name"
+            android:layout_alignLeft="@id/tv_appoint_doctor_name"
+            android:layout_alignBottom="@id/riv_doctor_info_head"
+            android:background="@drawable/bg_appoint_doctor_info"
+            android:padding="2dp"
+            android:textColor="#EC8C14"/>
+    </RelativeLayout>
+
+    <View
+        style="@style/line_outer"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#EEEEEE"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:paddingEnd="20dp"
+        android:paddingRight="20dp"
+        android:text="简介"
+        android:textColor="#535353"
+        android:textSize="16sp"/>
+
+    <View
+        style="@style/line_outer"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/tv_doctor_info_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="0dp"/>
+    </ScrollView>
 </LinearLayout>

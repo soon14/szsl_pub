@@ -38,6 +38,8 @@ import com.bsoft.hospital.pub.suzhoumh.util.aes.AESUtil;
 import com.bsoft.hospital.pub.suzhoumh.view.sort.SortModel;
 import com.daoyixun.ipsmap.IpsMapSDK;
 
+import cn.jpush.android.api.JPushInterface;
+
 /**
  * _oo0oo_
  * o8888888o
@@ -529,6 +531,9 @@ public class AppApplication extends BaseApplication {
 
         //使用默认配置信息
         IpsMapSDK.init(this, Constants.IPSMAP_APP_KEY);
+
+        //极光推送
+        JPushInterface.init(this);
 
 
     }

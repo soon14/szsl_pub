@@ -23,8 +23,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="gone"
-            >
+            android:visibility="gone">
 
             <RelativeLayout
                 android:layout_width="fill_parent"
@@ -42,8 +41,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="20dp"
                     android:layout_marginTop="30dp"
+                    android:layout_marginRight="20dp"
                     android:orientation="horizontal"
                     >
 
@@ -131,45 +130,39 @@
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
-                >
+                android:visibility="visible">
 
                 <View
                     android:layout_width="2dp"
                     android:layout_height="70dp"
                     android:layout_marginLeft="25dp"
-                    android:background="#83cd6a"
-                    />
+                    android:background="#83cd6a"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="20dp"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginRight="10dp"
-                        android:background="@drawable/queue_icon_second_bg"
-                        />
+                        android:background="@drawable/queue_icon_second_bg"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:background="@drawable/queue_info_bg"
-                        android:orientation="horizontal"
-                        >
+                        android:orientation="horizontal">
 
                         <RelativeLayout
                             android:layout_width="0dp"
                             android:layout_height="fill_parent"
                             android:layout_weight="2"
-                            android:padding="25dp"
-                            >
+                            android:padding="25dp">
 
                             <TextView
                                 android:id="@+id/tv_dept"
@@ -177,15 +170,14 @@
                                 android:layout_height="wrap_content"
                                 android:text="内科"
                                 android:textColor="#333333"
-                                android:textSize="17sp"
-                                />
+                                android:textSize="17sp"/>
 
                             <TextView
                                 android:id="@+id/tv_consult"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_toEndOf="@id/tv_dept"
                                 android:layout_marginLeft="10dp"
+                                android:layout_toEndOf="@id/tv_dept"
                                 android:layout_toRightOf="@id/tv_dept"
                                 android:text=""
                                 android:textColor="#333333"
@@ -230,54 +222,52 @@
                                 android:id="@+id/tv_name"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignLeft="@+id/tv_doctor"
                                 android:layout_below="@+id/tv_doctor"
+                                android:layout_alignLeft="@+id/tv_doctor"
                                 android:layout_marginTop="10dp"
                                 android:layout_toRightOf="@+id/tv_name_tip"
                                 android:text=""
                                 android:textColor="#333333"
-                                android:textSize="17sp"
-                                />
+                                android:textSize="17sp"/>
                         </RelativeLayout>
 
                         <View
                             android:layout_width="1dp"
                             android:layout_height="fill_parent"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:background="#d9d9d9"/>
 
-                        <RelativeLayout
+                        <LinearLayout
                             android:layout_width="0dp"
-                            android:layout_height="fill_parent"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:paddingTop="25dp"
-                            >
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:paddingTop="25dp">
 
                             <TextView
                                 android:id="@+id/tv_tip"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="4dp"
                                 android:text="当前"
                                 android:textColor="#999999"
-                                android:textSize="17sp"
-                                />
+                                android:textSize="17sp"/>
 
                             <TextView
                                 android:id="@+id/tv_current_num"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@+id/tv_tip"
-                                android:layout_centerHorizontal="true"
                                 android:layout_marginTop="20dp"
                                 android:text=""
                                 android:textSize="22sp"
                                 />
-                        </RelativeLayout>
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -287,9 +277,9 @@
             android:visibility="visible">
 
             <com.app.tanklib.pulltorefresh.PullToRefreshListView
-                android:id="@+id/pull_refresh_list"
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/pull_refresh_list"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="@color/bg"

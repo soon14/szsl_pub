@@ -30,8 +30,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="20dp"
                 android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
                 android:orientation="horizontal"
                 >
 
@@ -160,13 +160,22 @@
                         >
 
                         <TextView
+                            android:id="@+id/tv_yndh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/bg_text_orange"
+                            android:text="院导航"
+                            android:textColor="@color/orange"
+                            android:textSize="14sp"/>
+
+                        <TextView
                             android:id="@+id/tv_dept"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="内科"
                             android:textColor="#333333"
-                            android:textSize="15sp"
-                            />
+                            android:textSize="15sp"/>
 
                         <TextView
                             android:id="@+id/tv_consult"
@@ -218,8 +227,8 @@
                             android:id="@+id/tv_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@+id/tv_doctor"
                             android:layout_below="@+id/tv_doctor"
+                            android:layout_alignLeft="@+id/tv_doctor"
                             android:layout_marginTop="10dp"
                             android:layout_toRightOf="@+id/tv_name_tip"
                             android:text=""
@@ -242,8 +251,8 @@
                             android:id="@+id/tv_floor"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignLeft="@+id/tv_name"
                             android:layout_below="@+id/tv_name"
+                            android:layout_alignLeft="@+id/tv_name"
                             android:layout_marginTop="10dp"
                             android:layout_toRightOf="@+id/tv_floor_tip"
                             android:text=""
@@ -255,8 +264,8 @@
                     <View
                         android:layout_width="1dp"
                         android:layout_height="fill_parent"
-                        android:layout_marginBottom="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:background="#d9d9d9"
                         android:visibility="gone"
                         />

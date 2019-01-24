@@ -78,18 +78,19 @@ public class MyQueueNewActivity extends BaseActivity {
 
         });
         actionBar.setRefreshTextView("刷新", refreshAction);
-        ll_my_queue = (LinearLayout) findViewById(R.id.ll_my_queue);
-        ll_my_queue_empty = (LinearLayout) findViewById(R.id.ll_my_queue_empty);
-        ll_parent = (LinearLayout) findViewById(R.id.ll_parent);
+        ll_my_queue = findViewById(R.id.ll_my_queue);
+        ll_my_queue_empty = findViewById(R.id.ll_my_queue_empty);
+        ll_parent = findViewById(R.id.ll_parent);
         ll_parent.setVisibility(View.GONE);
 
-        tv_currentname = (TextView) findViewById(R.id.tv_current_num);
-        tv_name = (TextView) findViewById(R.id.tv_name);
-        tv_doctor = (TextView) findViewById(R.id.tv_doctor);
-        tv_wait = (TextView) findViewById(R.id.tv_wait);
-        tv_num = (TextView) findViewById(R.id.tv_num);
-        tv_dept = (TextView) findViewById(R.id.tv_dept);
-        tv_consult = (TextView) findViewById(R.id.tv_consult);
+        tv_currentname = findViewById(R.id.tv_current_num);
+        tv_name = findViewById(R.id.tv_name);
+        tv_doctor = findViewById(R.id.tv_doctor);
+        tv_wait = findViewById(R.id.tv_wait);
+        tv_num = findViewById(R.id.tv_num);
+        tv_dept = findViewById(R.id.tv_dept);
+        tv_consult = findViewById(R.id.tv_consult);
+
     }
 
     BsoftActionBar.Action refreshAction = new BsoftActionBar.Action() {
