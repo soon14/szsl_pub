@@ -44,8 +44,8 @@ public class CloudClinicActivity extends BaseActivity {
                 //云预约
                 clazz = CloudAppointmentRegistrationActivity.class;
                 break;
+            //预约记录
             case R.id.ll_cloud_appointment_record:
-                //预约记录
                 clazz = CloudAppointmentRecordActivity.class;
                 break;
 
