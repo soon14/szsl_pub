@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/calendar/calendar.iml" filepath="$PROJECT_DIR$/calendar/calendar.iml" />
       <module fileurl="file://$PROJECT_DIR$/checkupdatelib/checkupdatelib.iml" filepath="$PROJECT_DIR$/checkupdatelib/checkupdatelib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/szsl_pub.iml" filepath="$PROJECT_DIR$/.idea/szsl_pub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/szsl_pub.iml" filepath="$PROJECT_DIR$/szsl_pub.iml" />
       <module fileurl="file://$PROJECT_DIR$/tanklibutil/tanklibutil.iml" filepath="$PROJECT_DIR$/tanklibutil/tanklibutil.iml" />
     </modules>
   </component>

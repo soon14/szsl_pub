@@ -49,6 +49,7 @@
     <string name="cloud_reservation">云预约</string>
     <string name="cloud_waiting">云候诊</string>
     <string name="cloud_pay">云支付</string>
+    <string name="cloud_sign_in">签到取号</string>
     <string name="appointment_record">预约记录</string>
     <string name="query_appointment_record">随时随地查询预约记录</string>
     <string name="cloud_service">云服务</string>

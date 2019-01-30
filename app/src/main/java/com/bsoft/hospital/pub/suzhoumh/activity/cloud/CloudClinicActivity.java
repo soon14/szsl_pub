@@ -35,7 +35,7 @@ public class CloudClinicActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.ll_cloud_reservation, R.id.ll_cloud_appointment_record})
+    @OnClick({R.id.ll_cloud_reservation, R.id.ll_cloud_appointment_record, R.id.ll_cloud_waiting, R.id.ll_cloud_sign_in})
     public void doClick(View v) {
         Intent intent;
         Class<?> clazz = null;
@@ -44,9 +44,17 @@ public class CloudClinicActivity extends BaseActivity {
                 //云预约
                 clazz = CloudAppointmentRegistrationActivity.class;
                 break;
-            //预约记录
             case R.id.ll_cloud_appointment_record:
+                //预约记录
                 clazz = CloudAppointmentRecordActivity.class;
+                break;
+            case R.id.ll_cloud_waiting:
+                //云候诊
+                clazz = CloudWaitingActivity.class;
+                break;
+            case R.id.ll_cloud_sign_in:
+                //签到取号
+                clazz = CloudSignInActivity.class;
                 break;
 
         }

@@ -72,6 +72,33 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
+                            android:id="@+id/ll_cloud_sign_in"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@null"
+                                android:src="@mipmap/cloud_pay"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_8"
+                                android:text="@string/cloud_sign_in"
+                                android:textColor="@color/black_text"
+                                android:textSize="@dimen/sp_14"/>
+                        </LinearLayout>
+
+                        <View
+                            style="@style/line_inner_vertical"/>
+
+                        <LinearLayout
+                            android:id="@+id/ll_cloud_waiting"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -93,30 +120,7 @@
                                 android:textSize="@dimen/sp_14"/>
                         </LinearLayout>
 
-                        <View
-                            style="@style/line_inner_vertical"/>
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:contentDescription="@null"
-                                android:src="@mipmap/cloud_pay"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/dp_8"
-                                android:text="@string/cloud_pay"
-                                android:textColor="@color/black_text"
-                                android:textSize="@dimen/sp_14"/>
-                        </LinearLayout>
                     </LinearLayout>
 
                     <View
@@ -295,6 +299,7 @@
                     </RelativeLayout>
 
                 </LinearLayout>
+
                 <View
                     style="@style/line_outer"/>
             </LinearLayout>
