@@ -1,24 +1,23 @@
 package com.bsoft.hospital.pub.suzhoumh.fragment.index;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.service.quicksettings.TileService;
+import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.app.tanklib.http.BsoftNameValuePair;
 import com.app.tanklib.util.AsyncTaskUtil;
 import com.app.tanklib.view.BsoftActionBar;
-import com.bsoft.hospital.pub.suzhoumh.AppApplication;
 import com.bsoft.hospital.pub.suzhoumh.Constants;
 import com.bsoft.hospital.pub.suzhoumh.R;
 import com.bsoft.hospital.pub.suzhoumh.activity.account.MipcaActivityCapture;
@@ -29,7 +28,6 @@ import com.bsoft.hospital.pub.suzhoumh.activity.app.hosptial.HosptialPageActivit
 import com.bsoft.hospital.pub.suzhoumh.activity.app.insurance.InsuranceActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.app.more.MoreActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.app.news.HospitalNewsActivity;
-import com.bsoft.hospital.pub.suzhoumh.activity.app.news.NewsListActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.app.queue.MyQueueNewActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.app.report.ReportMainActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.app.schedule.DoctorScheduleActivity;
@@ -37,16 +35,12 @@ import com.bsoft.hospital.pub.suzhoumh.activity.app.sign.SignListActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.app.physical.PhysicalActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.app.visit.VisitListActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.charge.ParkingChargesActivity;
-import com.bsoft.hospital.pub.suzhoumh.activity.clinic.ClinicDetailInfoActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.cloud.CloudClinicActivity;
 import com.bsoft.hospital.pub.suzhoumh.api.HttpApi;
-import com.bsoft.hospital.pub.suzhoumh.model.LoginUser;
 import com.bsoft.hospital.pub.suzhoumh.model.ResultModel;
 import com.bsoft.hospital.pub.suzhoumh.model.ScanVo;
 import com.bsoft.hospital.pub.suzhoumh.model.Statue;
 import com.bsoft.hospital.pub.suzhoumh.model.StringModel;
-import com.bsoft.hospital.pub.suzhoumh.util.ContextUtils;
-import com.bsoft.hospital.pub.suzhoumh.util.SpUtil;
 import com.bsoft.hospital.pub.suzhoumh.util.pop.CampusSelection;
 import com.bsoft.hospital.pub.suzhoumh.util.pop.impl.CampusSelectionPopWindowImpl;
 import com.daoyixun.ipsmap.IpsMapSDK;
@@ -246,9 +240,22 @@ public class HomeFragment extends BaseFragment implements OnClickListener {
                 break;
             case R.id.rl_home_sbbx:
                 //商业保险
+
                 if (loginUser != null && loginUser.idcard != null && !loginUser.idcard.equals("")) {
-                    intent = new Intent(baseContext, InsuranceActivity.class);
-                    startActivity(intent);
+                    new AlertDialog.Builder(baseContext)
+                            .setTitle("商保通")
+                            .setMessage("是否本人授权同意APP进行商保申请、报销流程")
+                            .setPositiveButton("同意", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent intent = new Intent(baseContext, InsuranceActivity.class);
+                                    startActivity(intent);
+                                }
+                            })
+                            .setNegativeButton("不同意", null)
+                            .create()
+                            .show();
+
                 } else {
                     Toast.makeText(baseContext, "请先完善个人信息", Toast.LENGTH_SHORT).show();
                 }

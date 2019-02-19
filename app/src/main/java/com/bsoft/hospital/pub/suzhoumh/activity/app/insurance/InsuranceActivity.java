@@ -1,24 +1,39 @@
 package com.bsoft.hospital.pub.suzhoumh.activity.app.insurance;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 
+import com.app.tanklib.http.BsoftNameValuePair;
 import com.app.tanklib.view.BsoftActionBar;
 import com.bsoft.hospital.pub.suzhoumh.R;
 import com.bsoft.hospital.pub.suzhoumh.activity.base.BaseActivity;
+import com.bsoft.hospital.pub.suzhoumh.api.HttpApi;
+import com.bsoft.hospital.pub.suzhoumh.model.InsuranceModel;
+import com.bsoft.hospital.pub.suzhoumh.model.NullModel;
+import com.bsoft.hospital.pub.suzhoumh.model.ResultModel;
+import com.bsoft.hospital.pub.suzhoumh.model.Statue;
 import com.bsoft.hospital.pub.suzhoumh.util.Html5WebView;
+import com.bsoft.hospital.pub.suzhoumh.util.ToastUtils;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author :lizhengcao
  * @date :2018/3/21
  * E-mail:lizc@bsoft.com.cn
- * @类说明 商业保险
+ * @类说明 商业保险 yby_jzsq_app
  */
 
 public class InsuranceActivity extends BaseActivity {
 
     private Html5WebView mWebView;
+    private String birthday;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +45,12 @@ public class InsuranceActivity extends BaseActivity {
     }
 
     private void initView() {
-        mWebView = (Html5WebView) findViewById(R.id.webview);
-        String birthday = loginUser.idcard.substring(6, 14);
-        mWebView.loadUrl("http://publich5.taivexmhealth.com/api/visit/taivex?" +
-                "username=" + loginUser.realname +
-                "&cardCode=" + "01" +
-                "&cardNo=" + loginUser.idcard +
-                "&tenantId=" + "suzhould" + "" +
-                "&phone=" + loginUser.mobile +
-                "&sex=" + loginUser.sexcode +
-                "&country=" + "中国" +
-                "&birthday=" + birthday);
-//        mWebView.setWebViewClient(mWebClientListener);
+        mWebView = findViewById(R.id.webview);
+        birthday = loginUser.idcard.substring(6, 14);
+
+
+        new GetDataTask().execute();
+
         mWebView.setWebsiteChangeListener(new Html5WebView.WebsiteChangeListener() {
             @Override
             public void onWebsiteChange(String title) {
@@ -64,25 +73,10 @@ public class InsuranceActivity extends BaseActivity {
         return super.onKeyDown(keyCode, event);
     }
 
-//    /**
-//     * web网页加载时的监听
-//     */
-//    public WebViewClient mWebClientListener = new WebViewClient() {
-//        @Override
-//        public void onPageStarted(WebView view, String url, Bitmap favicon) {
-//            actionBar.startTextRefresh();
-//        }
-//
-//        @Override
-//        public void onPageFinished(WebView view, String url) {
-//            actionBar.endTextRefresh();
-//        }
-//    };
 
     @Override
     public void findView() {
         findActionBar();
-//        actionBar.setTitle("商业保险");
         actionBar.setBackAction(new BsoftActionBar.Action() {
             @Override
             public void performAction(View view) {
@@ -94,5 +88,58 @@ public class InsuranceActivity extends BaseActivity {
                 return R.drawable.btn_back;
             }
         });
+    }
+
+    /**
+     * 获取商保通接口
+     *
+     * @author Administrator
+     */
+    class GetDataTask extends AsyncTask<Void, Void, ResultModel<List<InsuranceModel>>> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            actionBar.startTextRefresh();
+        }
+
+        @Override
+        protected void onPostExecute(ResultModel<List<InsuranceModel>> result) {
+            actionBar.endTextRefresh();
+            if (null != result) {
+                if (result.statue == Statue.SUCCESS) {
+                    if (null != result.list && result.list.size() > 0) {
+
+                        mWebView.loadUrl("http://publich5.taivexmhealth.com/api/visit/taivex?" +
+                                "username=" + loginUser.realname +
+                                "&cardCode=" + "01" +
+                                "&cardNo=" + loginUser.idcard +
+                                "&tenantId=" + "suzhould" + "" +
+                                "&phone=" + loginUser.mobile +
+                                "&sex=" + loginUser.sexcode +
+                                "&country=" + "中国" +
+                                "&birthday=" + birthday);
+                    } else {
+                        ToastUtils.showToastShort("获取商业报销失败");
+                    }
+                } else {
+                    ToastUtils.showToastShort(result.message);
+                }
+            } else {
+                ToastUtils.showToastShort("请求失败");
+            }
+        }
+
+        @Override
+        protected ResultModel<List<InsuranceModel>> doInBackground(Void... params) {
+            Map<String, String> map = new HashMap<>();
+            map.put("method", "yby_jzsq_app");
+            map.put("al_czlx", "1");
+            map.put("as_sfzh", loginUser.idcard);
+            map.put("as_brxm", loginUser.realname);
+            return HttpApi.getInstance().parserArray_His(InsuranceModel.class,
+                    "hiss/ser", map,
+                    new BsoftNameValuePair("id", loginUser.id),
+                    new BsoftNameValuePair("sn", loginUser.sn));
+        }
     }
 }
