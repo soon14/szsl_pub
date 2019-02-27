@@ -22,7 +22,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="217.5dp"
+                android:layout_height="165dp"
                 android:background="@mipmap/cloud_home"
                 android:contentDescription="@null"/>
 
@@ -37,38 +37,71 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@+id/ll_cloud_reservation"
-                    android:layout_width="151dp"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="79dp"
-                        android:layout_height="79dp"
-                        android:contentDescription="@null"
-                        android:src="@mipmap/cloud_reservation"/>
+                    <LinearLayout
+                        android:id="@+id/ll_cloud_reservation"
+                        android:layout_width="match_parent"
+                        android:layout_height="121.5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp_17"
-                        android:text="@string/cloud_reservation"
-                        android:textColor="@color/black_text"
-                        android:textSize="@dimen/sp_14"/>
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:contentDescription="@null"
+                            android:src="@mipmap/cloud_reservation"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:text="@string/cloud_reservation"
+                            android:textColor="@color/black_text"
+                            android:textSize="@dimen/sp_14"/>
+                    </LinearLayout>
+
+                    <View
+                        style="@style/line_inner"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_cloud_appointment_record"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="@dimen/dp_20"
+                            android:src="@mipmap/appointment_record"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_8"
+                            android:text="@string/appointment_record"
+                            android:textColor="@color/black_text"
+                            android:textSize="@dimen/sp_13"/>
+                    </LinearLayout>
                 </LinearLayout>
+
 
                 <View
                     style="@style/line_inner_vertical"/>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="209dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="87dp"
+                        android:layout_height="121.5dp"
                         android:orientation="horizontal">
 
                         <LinearLayout
@@ -80,10 +113,10 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
                                 android:contentDescription="@null"
-                                android:src="@mipmap/cloud_pay"/>
+                                android:src="@mipmap/cloud_sign_in"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -91,7 +124,7 @@
                                 android:layout_marginTop="@dimen/dp_8"
                                 android:text="@string/cloud_sign_in"
                                 android:textColor="@color/black_text"
-                                android:textSize="@dimen/sp_14"/>
+                                android:textSize="@dimen/sp_12"/>
                         </LinearLayout>
 
                         <View
@@ -106,8 +139,8 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
                                 android:contentDescription="@null"
                                 android:src="@mipmap/cloud_waiting"/>
 
@@ -117,7 +150,7 @@
                                 android:layout_marginTop="@dimen/dp_8"
                                 android:text="@string/cloud_waiting"
                                 android:textColor="@color/black_text"
-                                android:textSize="@dimen/sp_14"/>
+                                android:textSize="@dimen/sp_12"/>
                         </LinearLayout>
 
 
@@ -127,39 +160,41 @@
                         style="@style/line_inner"/>
 
                     <LinearLayout
-                        android:id="@+id/ll_cloud_appointment_record"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
                         android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            android:layout_marginLeft="@dimen/dp_20"
+                            android:src="@mipmap/cloud_pay"/>
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
+                            android:layout_marginLeft="8dp"
                             android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/appointment_record"
+                                android:text="@string/cloud_pay"
                                 android:textColor="@color/black_text"
                                 android:textSize="@dimen/sp_14"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/dp_8"
-                                android:text="@string/query_appointment_record"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:text="@string/cloud_pay_description"
                                 android:textColor="@color/gray_color"
                                 android:textSize="@dimen/sp_11"/>
                         </LinearLayout>
 
-                        <ImageView
-                            android:layout_width="53dp"
-                            android:layout_height="53dp"
-                            android:layout_marginLeft="@dimen/dp_17"
-                            android:src="@mipmap/appointment_record"/>
+
 
                     </LinearLayout>
                 </LinearLayout>
@@ -185,8 +220,11 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:layout_marginLeft="@dimen/dp_15"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/blue_cloud_rec"
+                        android:drawablePadding="@dimen/dp_4"
                         android:layout_gravity="center_vertical"
                         android:text="@string/cloud_service"
                         android:textColor="@color/black_text"
@@ -235,6 +273,8 @@
                                 android:layout_marginTop="6.5dp"
                                 android:text="@string/go_query"
                                 android:textColor="@color/black_text"
+                                android:drawableRight="@mipmap/index_service"
+                                android:drawablePadding="@dimen/dp_4"
                                 android:textSize="14.5sp"/>
                         </LinearLayout>
 
@@ -285,6 +325,8 @@
                                 android:layout_marginTop="6.5dp"
                                 android:text="@string/go_query"
                                 android:textColor="@color/black_text"
+                                android:drawableRight="@mipmap/index_service"
+                                android:drawablePadding="@dimen/dp_4"
                                 android:textSize="14.5sp"/>
                         </LinearLayout>
 
@@ -303,6 +345,26 @@
                 <View
                     style="@style/line_outer"/>
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <View
+                    style="@style/line_outer"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:background="@mipmap/help_center"/>
+            </LinearLayout>
+
+
         </LinearLayout>
     </ScrollView>
 

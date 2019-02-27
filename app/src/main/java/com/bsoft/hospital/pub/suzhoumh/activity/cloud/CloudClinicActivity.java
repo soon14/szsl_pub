@@ -41,7 +41,7 @@ public class CloudClinicActivity extends BaseActivity {
         Class<?> clazz = null;
         switch (v.getId()) {
             case R.id.ll_cloud_reservation:
-                //云预约
+                //预约
                 clazz = CloudAppointmentRegistrationActivity.class;
                 break;
             case R.id.ll_cloud_appointment_record:
@@ -49,14 +49,13 @@ public class CloudClinicActivity extends BaseActivity {
                 clazz = CloudAppointmentRecordActivity.class;
                 break;
             case R.id.ll_cloud_waiting:
-                //云候诊
+                //候诊
                 clazz = CloudWaitingActivity.class;
                 break;
             case R.id.ll_cloud_sign_in:
                 //签到取号
                 clazz = CloudSignInActivity.class;
                 break;
-
         }
         intent = new Intent(baseContext, clazz);
         startActivity(intent);

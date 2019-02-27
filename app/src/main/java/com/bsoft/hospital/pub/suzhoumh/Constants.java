@@ -38,9 +38,9 @@ public class Constants {
     /**
      * 东区IP , 机构ID http://172.20.17.31:8090 测试服务器的地址
      */
-    public static final String HttpUrlEasternDistrict = "http://218.4.142.107:8010/";
-    /*public static final String HttpUrlEasternDistrict = "http://172.20.17.31:8094/";*/
-     /*public static final String HttpUrlEasternDistrict = "http://192.168.1.106:8080/";*/
+    /*public static final String HttpUrlEasternDistrict = "http://218.4.142.107:8010/";*/
+    public static final String HttpUrlEasternDistrict = "http://172.20.17.31:8094/";
+    /*public static final String HttpUrlEasternDistrict = "http://192.168.1.106:8080/";*/
     public static final String HOSPITAL_ID_Eastern = "9858";//机构id
     public static final String typeHospitalNameEastern = "苏州市立医院东区";
     public static final String[] LongitudeAndLatitudeEastern = {"120.633178", "31.324441"};

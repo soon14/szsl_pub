@@ -46,18 +46,19 @@
 
     <!--云诊室-->
     <string name="cloud_clinic">互联网诊室</string>
-    <string name="cloud_reservation">云预约</string>
-    <string name="cloud_waiting">云候诊</string>
-    <string name="cloud_pay">云支付</string>
-    <string name="cloud_sign_in">签到取号</string>
+    <string name="cloud_reservation">预约</string>
+    <string name="cloud_waiting">候诊</string>
+    <string name="cloud_pay">支付</string>
+    <string name="cloud_pay_description">支付说明性文字</string>
+    <string name="cloud_sign_in">签到</string>
     <string name="appointment_record">预约记录</string>
     <string name="query_appointment_record">随时随地查询预约记录</string>
-    <string name="cloud_service">云服务</string>
-    <string name="cloud_report">云报告</string>
-    <string name="cloud_report_check">云报告检验报告</string>
+    <string name="cloud_service">互联网诊室服务</string>
+    <string name="cloud_report">报告</string>
+    <string name="cloud_report_check">报告检验报告</string>
     <string name="go_query">去查询</string>
-    <string name="cloud_file">云档案</string>
-    <string name="cloud_file_mark">云问诊就诊记录</string>
+    <string name="cloud_file">档案</string>
+    <string name="cloud_file_mark">问诊就诊记录</string>
     <string name="expert_clinic">专家门诊</string>
     <string name="ordinary_clinic">专科门诊</string>
     <string name="feature_clinic">特色门诊</string>

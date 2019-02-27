@@ -707,6 +707,14 @@
             android:name=".activity.cloud.CloudSignInActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.cloud.CloudPreClearActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.cloud.CloudRegistrationInfoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
 
         <!-- baidu -->
         <!-- push应用定义消息receiver声明 -->
