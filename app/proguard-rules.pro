@@ -260,6 +260,8 @@
   public *;
 }
 
+-dontwarn com.squareup.picasso.**
+
 #BaseRecyclerViewAdapterHelper
 -keep class com.chad.library.adapter.** {
 *;
@@ -289,4 +291,9 @@
 
 -dontwarn cn.jiguang.**
 -keep class cn.jiguang.** { *; }
+
+# luban
+-keep class top.zibin.luban.**{*;}
+-dontwarn top.zibin.luban.**
+
 

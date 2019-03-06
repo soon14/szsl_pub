@@ -13,6 +13,8 @@ import org.json.JSONObject;
  */
 public class CloudAppointmentConfirmModel extends AbsBaseVoSerializ {
     public String success;
+    public String regID;
+
     @Override
     public void buideJson(JSONObject job) throws JSONException {
 

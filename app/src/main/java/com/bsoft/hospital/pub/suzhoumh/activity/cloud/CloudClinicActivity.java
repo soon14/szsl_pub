@@ -19,7 +19,7 @@ import butterknife.OnClick;
  * @author :lizhengcao
  * @date :2019/1/4
  * E-mail:lizc@bsoft.com.cn
- * @类说明 云诊室
+ * @类说明 互联网诊室
  */
 public class CloudClinicActivity extends BaseActivity {
 
@@ -35,7 +35,12 @@ public class CloudClinicActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.ll_cloud_reservation, R.id.ll_cloud_appointment_record, R.id.ll_cloud_waiting, R.id.ll_cloud_sign_in})
+    @OnClick({
+            R.id.ll_cloud_reservation,
+            R.id.ll_cloud_appointment_record,
+            R.id.ll_cloud_waiting,
+            R.id.ll_cloud_sign_in,
+            R.id.ll_cloud_pay})
     public void doClick(View v) {
         Intent intent;
         Class<?> clazz = null;
@@ -55,6 +60,10 @@ public class CloudClinicActivity extends BaseActivity {
             case R.id.ll_cloud_sign_in:
                 //签到取号
                 clazz = CloudSignInActivity.class;
+                break;
+            case R.id.ll_cloud_pay:
+                //支付
+                clazz = CloudHandheldPaymentActivity.class;
                 break;
         }
         intent = new Intent(baseContext, clazz);

@@ -22,6 +22,7 @@ import com.bsoft.hospital.pub.suzhoumh.activity.adapter.cloud.CloudScheduleAdapt
 import com.bsoft.hospital.pub.suzhoumh.activity.adapter.cloud.listener.CloudScheduleListener;
 import com.bsoft.hospital.pub.suzhoumh.activity.cloud.CloudAppointmentConfirmActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.cloud.CloudAppointmentRegistrationActivity;
+import com.bsoft.hospital.pub.suzhoumh.activity.cloud.CloudConditionDescriptionActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.cloud.CloudSelectionDepartmentActivity;
 import com.bsoft.hospital.pub.suzhoumh.api.HttpApi;
 import com.bsoft.hospital.pub.suzhoumh.fragment.index.BaseFragment;
@@ -118,7 +119,7 @@ public class CloudScheduleFragment extends BaseFragment implements CloudSchedule
      */
     @Override
     public void onCloudScheduleAppointListener(CloudScheduleModel schedule) {
-        Intent intent = new Intent(mContext, CloudAppointmentConfirmActivity.class);
+        Intent intent = new Intent(mContext, CloudConditionDescriptionActivity.class);
         intent.putExtra("expert", expert);
         intent.putExtra("selectDept", selectDept);
         intent.putExtra("date", date);

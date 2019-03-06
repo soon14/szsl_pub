@@ -118,4 +118,10 @@
     <color name="line_color_outer">#dbdbdb</color>
     <color name="line_color_inner">#e6e6e6</color>
     <color name="text_gray">#4d4d4d</color>
+    <color name="text_gray2">#666666</color>
+    <color name="current_number_color">#FF7200</color>
+    <color name="cloud_video_refuse">#ddff6961</color>
+    <color name="cloud_video_refuse_press">#99ff6961</color>
+    <color name="cloud_video_accept">#dd43c662</color>
+    <color name="cloud_video_accept_press">#9943c662</color>
 </resources>

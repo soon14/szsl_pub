@@ -74,5 +74,26 @@
     <string name="state">状态</string>
     <string name="appoint">挂号</string>
     <string name="appointment_time">挂号时间：</string>
+    <string name="sudden_disease">所患疾病</string>
+    <string name="undiagnosed_result">如未确诊请填写尚未确诊</string>
+    <string name="condition_description">病情描述</string>
+    <string name="sick_description">填写病情描述，如疾病名称、症状、治疗经历及想要获得的帮助</string>
+    <string name="add_sick_pic">添加病历照片</string>
+    <string name="sick_next">下一步</string>
+    <string name="sick_image_description">添加有关疾病的病历或检验检查图片，方便医生就诊</string>
+    <string name="cloud_dept_name">科室名称</string>
+    <string name="patient_doctor">就诊医生：</string>
+    <string name="doctor_name">暂无医生</string>
+    <string name="current_number">当前叫号</string>
+    <string name="myself_number">我的号码</string>
+    <string name="treatment_time">就诊时间：</string>
+    <string name="refresh">刷新</string>
+    <string name="date">2018-09-10</string>
+    <string name="invite_video">邀请您进入视频就诊...</string>
+    <string name="video_doctor">周小红医生</string>
+    <string name="video_refuse">拒绝</string>
+    <string name="video_accept">接受</string>
+    <string name="cloud_pending_item">待支付项目</string>
+    <string name="cloud_paid_item">已支付项目</string>
 
 </resources>

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.bsoft.hospital.pub.suzhoumh.activity.cloud.CloudClinicActivity;
+import com.bsoft.hospital.pub.suzhoumh.activity.cloud.CloudWaitingActivity;
 import com.bsoft.hospital.pub.suzhoumh.model.cloud.CloudJpushModel;
 import com.bsoft.hospital.pub.suzhoumh.util.JsonUtil;
 
@@ -24,7 +25,7 @@ public class CloudJPushReceiver extends BroadcastReceiver {
         Bundle bundle = intent.getExtras();
         if (JPushInterface.ACTION_NOTIFICATION_RECEIVED.equals(intent.getAction())) {
             Log.e("CloudJPushReceiver", "通知进来了");
-            Intent mIntent = new Intent(context, CloudClinicActivity.class);
+            Intent mIntent = new Intent(context, CloudWaitingActivity.class);
             mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             String json = bundle.getString(JPushInterface.EXTRA_EXTRA);
             CloudJpushModel jpush = JsonUtil.jsonToObject(json, CloudJpushModel.class);

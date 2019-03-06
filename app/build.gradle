@@ -25,7 +25,7 @@ android {
 
         manifestPlaceholders = [
                 JPUSH_PKGNAME: applicationId,
-                JPUSH_APPKEY : "a49c5ab551c81b6da67e7a47", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_APPKEY : "f4c47af88f7d427fb7b7e46a", //JPush 上注册的包名对应的 Appkey.
                 JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
     }
@@ -91,6 +91,9 @@ dependencies {
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation 'cn.jiguang.sdk:jpush:3.1.1'
     implementation 'cn.jiguang.sdk:jcore:1.1.9'
+    implementation 'com.zhihu.android:matisse:0.5.2-beta4'
+    implementation 'top.zibin:Luban:1.1.8'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
     //libs包
     implementation files('libs/alipaySdk-20151112.jar')
     implementation files('libs/BaiduLBS_Android.jar')

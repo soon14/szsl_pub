@@ -14,23 +14,31 @@ import com.bsoft.hospital.pub.suzhoumh.Constants;
 import com.bsoft.hospital.pub.suzhoumh.R;
 import com.bsoft.hospital.pub.suzhoumh.activity.base.BaseActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.cloud.event.AppointConfirmEvent;
+import com.bsoft.hospital.pub.suzhoumh.api.AppHttpClient2;
 import com.bsoft.hospital.pub.suzhoumh.api.HttpApi;
-import com.bsoft.hospital.pub.suzhoumh.model.NullModel;
+import com.bsoft.hospital.pub.suzhoumh.api.HttpPostFilesListener;
 import com.bsoft.hospital.pub.suzhoumh.model.ResultModel;
 import com.bsoft.hospital.pub.suzhoumh.model.Statue;
 import com.bsoft.hospital.pub.suzhoumh.model.cloud.CloudAppointmentConfirmModel;
+import com.bsoft.hospital.pub.suzhoumh.model.cloud.CloudConditionDescriptionModel;
 import com.bsoft.hospital.pub.suzhoumh.model.cloud.CloudScheduleModel;
 import com.bsoft.hospital.pub.suzhoumh.model.cloud.CloudSelectExpertModel;
 import com.bsoft.hospital.pub.suzhoumh.model.cloud.SelectDeptModel;
+import com.bsoft.hospital.pub.suzhoumh.util.FileUtil;
 import com.bsoft.hospital.pub.suzhoumh.util.ToastUtils;
 
 import org.greenrobot.eventbus.EventBus;
 
+import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import top.zibin.luban.Luban;
+import top.zibin.luban.OnCompressListener;
+
 
 
 /**
@@ -61,6 +69,11 @@ public class CloudAppointmentConfirmActivity extends BaseActivity {
     private String date;
     private CloudScheduleModel schedule;
     private String cloudType;
+    private String suddenDiease;
+    private String conditionDescription;
+    private List<String> mMatisseSelectPath;
+    private List<File> mFileList;
+    private String url = Constants.getHttpUrl() + "api/authex/cloudClinic/uploadIllnessInfo";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,12 +85,17 @@ public class CloudAppointmentConfirmActivity extends BaseActivity {
     }
 
     @SuppressLint("SetTextI18n")
+    @SuppressWarnings("unchecked")
     private void initData() {
+        mFileList = new ArrayList<>();
         expert = (CloudSelectExpertModel) getIntent().getSerializableExtra("expert");
         selectDept = (SelectDeptModel) getIntent().getSerializableExtra("selectDept");
         date = getIntent().getStringExtra("date");
         schedule = (CloudScheduleModel) getIntent().getSerializableExtra("schedule");
         cloudType = getIntent().getStringExtra(Constants.CLOUD_TYPE);
+        suddenDiease = getIntent().getStringExtra("suddenDiease");
+        conditionDescription = getIntent().getStringExtra("conditionDescription");
+        mMatisseSelectPath = (List<String>) getIntent().getSerializableExtra("matisseSelectPath");
 
         tvName.setText(loginUser.realname);
         tvDate.setText(date);
@@ -166,9 +184,46 @@ public class CloudAppointmentConfirmActivity extends BaseActivity {
         protected void onPostExecute(ResultModel<List<CloudAppointmentConfirmModel>> result) {
             if (null != result) {
                 if (result.statue == Statue.SUCCESS) {
-                    EventBus.getDefault().post(new AppointConfirmEvent());
-                    startActivity(new Intent(baseContext, CloudAppointmentRecordActivity.class));
-                    finish();
+                    if (null != result.list && result.list.size() > 0) {
+                        final CloudAppointmentConfirmModel data = result.list.get(0);
+                        mFileList.clear();
+                        actionBar.startTextRefresh();
+                        if (mMatisseSelectPath == null || mMatisseSelectPath.size() == 0) {
+                            //此时不进行图片的压缩处理
+                            httpPostFiles(data);
+
+                        } else {
+                            //进行压缩处理
+                            Luban.with(CloudAppointmentConfirmActivity.this)
+                                    .load(mMatisseSelectPath)
+                                    .ignoreBy(100)
+                                    .setTargetDir(getPath())
+                                    .setCompressListener(new OnCompressListener() {
+                                        @Override
+                                        public void onStart() {
+                                            // 压缩开始前调用，可以在方法内启动 loading UI
+                                        }
+
+                                        @Override
+                                        public void onSuccess(File file) {
+                                            //压缩成功后调用，返回压缩后的图片文件
+                                            mFileList.add(file);
+                                            if (mFileList.size() == mMatisseSelectPath.size()) {
+                                                //此时图片压缩已结束
+                                                httpPostFiles(data);
+                                            }
+                                        }
+
+                                        @Override
+                                        public void onError(Throwable e) {
+
+                                        }
+                                    }).launch();
+                        }
+
+                    } else {
+                        ToastUtils.showToastShort("数据为空");
+                    }
                 } else {
                     result.showToast(baseContext);
                 }
@@ -177,6 +232,62 @@ public class CloudAppointmentConfirmActivity extends BaseActivity {
             }
             actionBar.endTextRefresh();
         }
+    }
+
+    /**
+     * 上传图片
+     */
+    private void httpPostFiles(final CloudAppointmentConfirmModel data) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                ArrayList<BsoftNameValuePair> pairs = new ArrayList<>();
+                pairs.add(new BsoftNameValuePair("orgId", Constants.getHospitalID()));
+                pairs.add(new BsoftNameValuePair("userId", loginUser.id));
+                pairs.add(new BsoftNameValuePair("illName", suddenDiease));
+                pairs.add(new BsoftNameValuePair("illDescribe", conditionDescription));
+                pairs.add(new BsoftNameValuePair("regId", data.regID));
+                AppHttpClient2.getInstance().doHttpPostFiles(url, mFileList, "files", pairs, new HttpPostFilesListener() {
+                    @Override
+                    public void onSuccess(String json) {
+                        appointmentAfterPostOperation("病历图片上传成功");
+                    }
+
+                    @Override
+                    public void onFail() {
+                        appointmentAfterPostOperation("病历图片上传失败");
+                    }
+                });
+            }
+        }).start();
+    }
+
+    private void appointmentAfterPostOperation(final String msg) {
+        EventBus.getDefault().post(new AppointConfirmEvent());
+        startActivity(new Intent(baseContext, CloudAppointmentRecordActivity.class));
+        finish();
+        actionBar.endTextRefresh();
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                ToastUtils.showToastShort(msg);
+            }
+        });
+    }
+
+    /**
+     * 鲁班压缩图片后存储的路径文件夹
+     *
+     * @return
+     */
+    private String getPath() {
+        String path = FileUtil.getRootPath() + "/luban/image/";
+        File file = new File(path);
+        if (file.mkdirs()) {
+            //true 文件夹不存在需创建   false 文件夹已存在
+            return path;
+        }
+        return path;
     }
 
     @Override
