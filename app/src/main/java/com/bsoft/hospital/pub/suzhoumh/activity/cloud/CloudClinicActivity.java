@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 
 import com.app.tanklib.view.BsoftActionBar;
 import com.bsoft.hospital.pub.suzhoumh.R;
+import com.bsoft.hospital.pub.suzhoumh.activity.app.fee.FeePreListActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.base.BaseActivity;
 
 import butterknife.BindString;
@@ -63,7 +64,7 @@ public class CloudClinicActivity extends BaseActivity {
                 break;
             case R.id.ll_cloud_pay:
                 //支付
-                clazz = CloudHandheldPaymentActivity.class;
+                clazz = CloudFeePreListActivity.class;
                 break;
         }
         intent = new Intent(baseContext, clazz);

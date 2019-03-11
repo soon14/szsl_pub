@@ -16,15 +16,12 @@ import com.bsoft.hospital.pub.suzhoumh.R;
 import com.bsoft.hospital.pub.suzhoumh.activity.adapter.cloud.CloudWaitingAdapter;
 import com.bsoft.hospital.pub.suzhoumh.activity.adapter.cloud.listener.CloudWaitingListener;
 import com.bsoft.hospital.pub.suzhoumh.activity.base.BaseActivity;
-import com.bsoft.hospital.pub.suzhoumh.activity.cloud.dialog.CloudWaitingDialog;
 import com.bsoft.hospital.pub.suzhoumh.activity.cloud.dialog.CloudWaitingDialogUtil;
 import com.bsoft.hospital.pub.suzhoumh.activity.cloud.dialog.listener.CloudWaitingDialogListener;
 import com.bsoft.hospital.pub.suzhoumh.api.HttpApi;
 import com.bsoft.hospital.pub.suzhoumh.model.ResultModel;
 import com.bsoft.hospital.pub.suzhoumh.model.Statue;
 import com.bsoft.hospital.pub.suzhoumh.model.cloud.CloudWaitingModel;
-import com.bsoft.hospital.pub.suzhoumh.util.DeviceUtil;
-import com.bsoft.hospital.pub.suzhoumh.util.JsonUtil;
 import com.bsoft.hospital.pub.suzhoumh.util.ToastUtils;
 import com.bsoft.hospital.pub.suzhoumh.util.manager.SpacesItemDecoration;
 

@@ -61,7 +61,7 @@ public class CloudWaitingDialog extends Dialog {
             return this;
         }
 
-        public Builder setRefuceButton(OnClickListener refuseOnclickListener) {
+        public Builder setRefuseButton(OnClickListener refuseOnclickListener) {
             this.refuseOnclickListener = refuseOnclickListener;
             return this;
         }

@@ -37,7 +37,7 @@ public class CloudWaitingDialogUtil {
                         dialog.dismiss();
                     }
                 })
-                .setRefuceButton(new DialogInterface.OnClickListener() {
+                .setRefuseButton(new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (mListener != null)

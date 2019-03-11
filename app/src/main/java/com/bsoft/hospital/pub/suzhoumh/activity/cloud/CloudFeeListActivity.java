@@ -1,4 +1,4 @@
-package com.bsoft.hospital.pub.suzhoumh.activity.app.fee;
+package com.bsoft.hospital.pub.suzhoumh.activity.cloud;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -27,14 +27,15 @@ import com.app.tanklib.util.AsyncTaskUtil;
 import com.app.tanklib.view.BsoftActionBar.Action;
 import com.bsoft.hospital.pub.suzhoumh.Constants;
 import com.bsoft.hospital.pub.suzhoumh.R;
+import com.bsoft.hospital.pub.suzhoumh.activity.app.fee.FeeDetailActivity;
+import com.bsoft.hospital.pub.suzhoumh.activity.app.fee.FeePayActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.base.BaseActivity;
 import com.bsoft.hospital.pub.suzhoumh.api.HttpApi;
 import com.bsoft.hospital.pub.suzhoumh.api.YBHttpApi;
-import com.bsoft.hospital.pub.suzhoumh.model.FeeVo;
 import com.bsoft.hospital.pub.suzhoumh.model.CheckCodeVo;
+import com.bsoft.hospital.pub.suzhoumh.model.FeeVo;
 import com.bsoft.hospital.pub.suzhoumh.model.ResultModel;
 import com.bsoft.hospital.pub.suzhoumh.model.Statue;
-
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
@@ -44,7 +45,7 @@ import java.util.List;
 /**
  * 诊间支付,待支付项目列表
  */
-public class FeeListActivity extends BaseActivity {
+public class CloudFeeListActivity extends BaseActivity {
 
     public ListView listView;
     public PullToRefreshListView pullToRefreshListView;
@@ -107,7 +108,7 @@ public class FeeListActivity extends BaseActivity {
                     queryTask.execute();
                     return;
                 }
-                Intent intent = new Intent(baseContext, FeePayActivity.class);
+                Intent intent = new Intent(baseContext, CloudFeePayActivity.class);
                 intent.putExtra("feeList", getSelectedList());
                 intent.putExtra("busType", Constants.PAY_BUS_TPYE_ZJZF);
                 startActivity(intent);
@@ -134,7 +135,7 @@ public class FeeListActivity extends BaseActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent intent = new Intent(FeeListActivity.this, FeeDetailActivity.class);
+                Intent intent = new Intent(CloudFeeListActivity.this, CloudFeeDetailActivity.class);
                 intent.putExtra("feeVo", list.get(position - 1));
                 startActivity(intent);
             }
@@ -178,7 +179,7 @@ public class FeeListActivity extends BaseActivity {
         @Override
         protected ResultModel<ArrayList<FeeVo>> doInBackground(Void... params) {
 
-            return HttpApi.getInstance().parserArray_other(FeeVo.class, "PayRelatedService/clinicPay/getClinicPayList", new BsoftNameValuePair("sfzh", loginUser.idcard));
+            return HttpApi.getInstance().parserArray(FeeVo.class, "auth/remote/cloudClinic/getClinicPayList", new BsoftNameValuePair("sfzh", loginUser.idcard));
         }
 
         @SuppressWarnings("unchecked")
