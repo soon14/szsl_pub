@@ -2,13 +2,19 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
     -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            backward-compatibility can go here.
+
+
+
         -->
     </style>
 
@@ -17,7 +23,7 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
-    <style name="Widget" />
+    <style name="Widget"/>
 
     <!-- Base theme for the menu drawer. -->
     <style name="Widget.MenuDrawer">
@@ -47,7 +53,9 @@
         <item name="android:layout_height">@dimen/actionbar_height</item>
         <!--
 			<item name="android:padding">5dp</item> <item
-			name="android:layout_marginLeft">1px</item>
+			name="android:layout_marginLeft">1px</item>
+
+
         -->
     </style>
 
@@ -70,7 +78,7 @@
     </style>
 
     <!-- TabPages -->
-    <style name="MyWidget" parent="@android:style/Theme" />
+    <style name="MyWidget" parent="@android:style/Theme"/>
 
     <style name="MyWidget.TabText">
         <item name="android:textSize">17sp</item>
@@ -106,6 +114,17 @@
         <item name="android:layout_marginLeft">12dip</item>
         <item name="android:layout_marginTop">12dip</item>
         <item name="android:layout_marginBottom">12dip</item>
+    </style>
+
+    <style name="ExpressReceiverLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
     </style>
 
 </resources>

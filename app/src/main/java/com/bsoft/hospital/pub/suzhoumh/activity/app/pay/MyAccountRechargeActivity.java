@@ -1,5 +1,6 @@
 package com.bsoft.hospital.pub.suzhoumh.activity.app.pay;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -332,6 +333,7 @@ public class MyAccountRechargeActivity extends BaseActivity implements OnClickLi
         }
     }
 
+    @SuppressLint("HandlerLeak")
     private Handler mHandler = new Handler() {
         public void handleMessage(Message msg) {
             switch (msg.what) {

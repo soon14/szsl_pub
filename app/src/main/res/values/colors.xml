@@ -124,4 +124,9 @@
     <color name="cloud_video_refuse_press">#99ff6961</color>
     <color name="cloud_video_accept">#dd43c662</color>
     <color name="cloud_video_accept_press">#9943c662</color>
+    <color name="text_tips">#999</color>
+    <color name="main">#06b8dc</color>
+    <color name="stroke">#e8e8e8</color>
+    <color name="overlay">#60000000</color>
+    <color name="black">#323232</color>
 </resources>

@@ -30,6 +30,7 @@ import com.bsoft.hospital.pub.suzhoumh.Constants;
 import com.bsoft.hospital.pub.suzhoumh.activity.MainTabActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.app.appoint.AppointHistoryActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.app.visit.VisitListActivity;
+import com.bsoft.hospital.pub.suzhoumh.activity.cloud.CloudExpressReceiverActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.my.SettingAboutActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.my.SettingActivity;
 import com.bsoft.hospital.pub.suzhoumh.activity.my.family.MyFamilyActivity;
@@ -46,7 +47,7 @@ import com.securitysocial.soochowjar.SocialSecurityManager;
  */
 public class MyFragment extends BaseFragment implements OnClickListener {
 
-    RelativeLayout ll_myinfo, ll_myfamily, ll_orderhistory, ll_sweep, ll_setting, ll_visit, ll_insuranceinfo, ll_mynote;
+    RelativeLayout ll_myinfo, ll_myfamily, ll_orderhistory, ll_sweep, ll_setting, ll_visit, ll_insuranceinfo, ll_mynote, ll_goods_address;
     TextView name;
     RoundImageView header;
     Bitmap bitmap;
@@ -136,6 +137,7 @@ public class MyFragment extends BaseFragment implements OnClickListener {
         ll_insuranceinfo = (RelativeLayout) mainView.findViewById(R.id.ll_insuranceinfo);
         ll_mynote = (RelativeLayout) mainView.findViewById(R.id.ll_mynote);
         header = (RoundImageView) mainView.findViewById(R.id.header);
+        ll_goods_address = mainView.findViewById(R.id.ll_goods_address);
     }
 
     public void initData() {
@@ -148,6 +150,7 @@ public class MyFragment extends BaseFragment implements OnClickListener {
         ll_insuranceinfo.setOnClickListener(this);
         ll_mynote.setOnClickListener(this);
         header.setOnClickListener(this);
+        ll_goods_address.setOnClickListener(this);
     }
 
     @Override
@@ -167,6 +170,10 @@ public class MyFragment extends BaseFragment implements OnClickListener {
     public void onClick(View v) {
         Intent intent;
         switch (v.getId()) {
+            case R.id.ll_goods_address://我的收货地址
+                intent = new Intent(baseContext, CloudExpressReceiverActivity.class);
+                startActivity(intent);
+                break;
             case R.id.ll_myinfo://完善信息
                 intent = new Intent(baseContext, MyInfoActivity.class);
                 startActivity(intent);

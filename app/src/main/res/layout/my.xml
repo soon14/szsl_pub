@@ -94,6 +94,36 @@
                 android:background="@color/divider2white"/>
         </RelativeLayout>
 
+
+        <RelativeLayout
+            android:id="@+id/ll_goods_address"
+            style="@style/settingLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dip"
+                android:text="我的收货地址"
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dip"
+                android:src="@drawable/arrow_right"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.6dip"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dip"
+                android:background="@color/divider2white"/>
+        </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/ll_orderhistroy"
             style="@style/settingLayout">

@@ -65,6 +65,10 @@ android {
     }
     //解决android 6.0(api 23) SDK，不再提供org.apache.http.*
     useLibrary 'org.apache.http.legacy'
+   /* compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }*/
     //让所有的第三方包强制使用指定版本的support包
     configurations.all {
         resolutionStrategy.eachDependency { DependencyResolveDetails details ->
